@@ -1,6 +1,6 @@
 
 // set counter down date
-let countDownDate =  new Date("may 30, 2024 00:00:00").getTime();//store the time and date when the countdown wil
+let countDownDate =  new Date("mar 30, 2024 00:00:00").getTime();//store the time and date when the countdown wil
 
 
 // create an interval
