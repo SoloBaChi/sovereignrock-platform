@@ -1,0 +1,33 @@
+/* Contact us Styles goes Here */
+
+.contact-us {
+  /* border: 1px solid red; */
+}
+.contact-us input,
+.contact-us textarea,
+.contact-us .cta-btn {
+  background: transparent;
+  border: 1px solid #a2a7bb;
+  color: #fff;
+}
+.contact-us button {
+  color: #000;
+  background: initial;
+  border: none;
+}
+.contact-us input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
+}
+.contact-us .cta-btn {
+  font-weight: 800;
+  font-size: 0.7875rem;
+  width: 120px;
+  border-radius: 8px;
+}
+
+@media (min-width: 980px) {
+  .contact-us .cta-btn {
+    width: 100% !important;
+  }
+
+}
