@@ -1,8 +1,8 @@
 import React from "react";
 
-function Contactus(props) {
+function EventCenter(props) {
   return (
-    <div className="form-container contact-us">
+    <div className="form-container contact-us event-center">
       <form className="form-wrapper">
         <div className="double">
           <div className="form-field">
@@ -42,4 +42,4 @@ function Contactus(props) {
   );
 }
 
-export default Contactus;
+export default EventCenter;

@@ -4,6 +4,7 @@ import InstagramIcon from "../icons/InstagramIcon";
 import FbIcon from "../icons/FbIcon";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 function Footer(props) {
   const notificationMsg = (msg) => {
@@ -17,9 +18,13 @@ function Footer(props) {
             <div className="social-media-links">
               <div className="flex-container">
                 <div className="flex-item">
-                  <div className="icon-container">
+                  <Link
+                    to="https://www.instagram.com/sovereignrock_eventcenter?igsh=cDFjdmNlY3V2ZmRi"
+                    target="_blank"
+                    className="icon-container"
+                  >
                     <InstagramIcon />
-                  </div>
+                  </Link>
                 </div>
                 <div className="flex-item">
                   <div className="icon-container">
@@ -47,15 +52,16 @@ function Footer(props) {
           <div className="flex-item">
             <div className="flex-item-section">
               <h5>reach us</h5>
-              <a
+              <Link
                 className="mail"
-                href="maito:sovereignrockeventcenter@gmail.com"
+                to="maito:sovereignrockeventcenter@gmail.com"
+                target="_blank"
               >
                 sovereignrockeventcenter@gmail.com
-              </a>
-              <a className="tel" href="tel:(682) 403 7456">
+              </Link>
+              <Link className="tel" to="tel:(682) 403 7456" target="_blank">
                 (682) 403 7456
-              </a>
+              </Link>
             </div>
             <div className="flex-item-section">
               <h5>location</h5>

@@ -3,7 +3,7 @@
   color: #fff;
   background: var(--primary-color);
   background: #1f2029;
-  height: 1000px;
+  background: var(--gray);
 }
 .toastify-btn-container button {
   font-weight: 800;

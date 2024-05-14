@@ -13,7 +13,7 @@ function Navbar(props) {
       <div className="flex-container-2">
         <div className="flex-item">
           <Link to="/" className="logo-container">
-            logo
+            <img src={`/assets/logo-Image.jpg`} alt="sovereign rock logo" />
           </Link>
         </div>
         <div className="flex-item">

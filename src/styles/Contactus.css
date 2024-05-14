@@ -10,6 +10,10 @@
   border: 1px solid #a2a7bb;
   color: #fff;
 }
+.contact-us input:focus,
+.contact-us textarea:focus {
+  border: 1px solid var(--primary-color);
+}
 .contact-us button {
   color: #000;
   background: initial;
@@ -29,5 +33,4 @@
   .contact-us .cta-btn {
     width: 100% !important;
   }
-
 }
