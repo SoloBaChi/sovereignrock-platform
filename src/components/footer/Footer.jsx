@@ -1,5 +1,5 @@
 import React from "react";
-import Contactus from "../home/Contactus";
+import Contactus from "../shared/Contactus";
 import InstagramIcon from "../icons/InstagramIcon";
 import FbIcon from "../icons/FbIcon";
 import { ToastContainer, toast } from "react-toastify";
@@ -35,7 +35,7 @@ function Footer(props) {
             </div>
           </div>
           <div className="flex-item">
-            <div className="contactus-container">
+            <div className="contactus-container" id="tour">
               <h4>contact us / schedule a tour</h4>
               <Contactus />
               <div className="toastify-btn-container">

@@ -7,19 +7,16 @@ Default Class Styles across all pages
 :root {
   --primary-btn: #b76e79;
   --primary-color: #f69b28;
-  --blue-color: #1167b4;
+  --purple: #6669ae;
+  --dk-brown: #888062;
   --secondary-color: #8b4513;
-  --test-color-1: #001f3f;
-  --secondary-btn: #ffd700;
   --dark-color: #010216;
-  --reserved-color: #fc64351a;
   --gold: #ffd700;
   --gray: #333333;
-  --footer-bg-2: #b76e79;
-  --footer-bg-1: #a97474;
+  --frame-color: #d1d2e7;
   --black-color: #000000;
   --white-color: #ffffff;
-  --white-bg: #fff;
+  --white-bg: #ffffff;
 }
 
 html {
@@ -54,33 +51,11 @@ body {
   margin: 0;
   font-family: "Inknut Antiqua", serif;
   background: var(--white-bg);
-  color: var(--black-color);
+  color: var(--secondary-color);
   counter-reset: count;
   overflow-x: hidden;
 }
-.cta-btn,
-button:not(.toastify-btn) {
-  padding: 0.75rem 1.2rem;
-  display: inline-block;
-  background: var(--primary-color);
-  box-shadow: none;
-  border: none;
-  color: #fff;
-  text-transform: capitalize;
-  cursor: pointer;
-  text-align: center;
-  font-weight: 900;
-  font-size: 1rem;
-  font-family: "Inknut Antiqua", serif;
-}
-/* .cta-btn {
-  border-radius: 8px;
-} */
 
-.secondary-btn {
-  /* background:var(--secondary-btn); */
-  background: var(--secondary-color);
-}
 h1,
 h2,
 h3,
@@ -89,7 +64,18 @@ h5,
 h6 {
   text-transform: capitalize;
   font-weight: 800;
-  margin-bottom: 0.85rem;
+  /* margin-bottom: 0.85rem; */
+  color: var(--purple);
+}
+h1 {
+  line-height: initial;
+}
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 100%;
 }
 h3 {
   font-size: 1.5rem;
@@ -115,25 +101,57 @@ img {
   border-radius: inherit;
   width: 100%;
 }
+.img-container {
+  display: inline-block;
+  margin: 0 auto;
+}
 ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 p {
-  color: #1e1e1e;
+  color: var(--gray);
   font-size: 0.878rem;
 }
-
 section {
   padding: 1.5rem 5%;
 }
 
+.cta-btn,
+button:not(.toastify-btn) {
+  padding: 0.75rem 1.2rem;
+  display: inline-block;
+  background: var(--dk-brown);
+  box-shadow: none;
+  border: none;
+  color: #fff;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1rem;
+  font-family: "Inknut Antiqua", serif;
+}
+.secondary-btn {
+  /* background:var(--secondary-btn); */
+  background: var(--dk-brown);
+}
+
 /* ============Form element Stykes========= */
+.form-container .double {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 4%;
+}
+.form-container .double > * {
+  flex-basis: 48%;
+}
 .form-field {
   position: relative;
   border-radius: 5px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.2rem;
 }
 .form-field label {
   text-transform: capitalize;
@@ -149,6 +167,9 @@ section {
   border: none;
   box-shadow: none;
   outline: none;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: none;
 }
 .form-field .eye-icon-container,
 .form-field .icon-container {
@@ -169,18 +190,21 @@ section {
   margin-bottom: 1.5rem;
 }
 
+/* ==========================
+For Desktop Device
+=============================*/
 @media (min-width: 980px) {
   h3 {
-    font-size: 3rem;
+    font-size: 2.45rem;
   }
   h4 {
-    font-size: 1rem;
+    font-size: 0.859rem;
   }
   p {
-    font-size: 1rem;
+    font-size: 0.859rem;
   }
   section {
-    padding: 2rem 8%;
+    padding: 2rem 7%;
   }
   .flex-container-4,
   .flex-container-2 {
@@ -213,5 +237,20 @@ section {
   .grid-container-3 > *,
   .grid-container-2 > * {
     margin-bottom: 0;
+  }
+}
+
+/* ==========================
+Large Desktop Device
+==============================*/
+@media (min-width: 1200px) {
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
   }
 }

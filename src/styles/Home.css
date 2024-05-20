@@ -6,6 +6,21 @@
   position: relative;
   z-index: -2; */
 }
+.home-page > * {
+  margin-bottom: 5rem;
+}
+.home-page > *:last-child {
+  margin-bottom: 0;
+}
+
+.home-page .inner-flex {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.2rem;
+}
+.home-page .inner-flex > * {
+  /* border: 1px solid red; */
+}
 /* ----------Hero section-------- */
 .hero-section {
   /* border: 2px solid red; */
@@ -19,31 +34,23 @@
   color: var(--secondary-color);
   text-transform: initial;
   margin: 4.5rem 0;
+  color: var(--purple);
+  font-style: italic;
 }
 .hero-section h1 span {
-  background: linear-gradient(
-    90deg,
-    rgba(246, 155, 40, 1) 23%,
-    rgba(255, 215, 0, 1) 46%,
-    rgba(246, 155, 40, 1) 62%,
-    rgba(246, 157, 39, 1) 63%,
-    rgba(139, 69, 19, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--dk-brown);
+  font-style: normal;
 }
+.home-page h2,
 .hero-section h2 {
-  font-size: 1.5rem;
   font-weight: 400;
-  margin-bottom: 0;
-  color: var(--secondary-color);
-  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 .hero-section h3 {
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.25rem;
-  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
 }
 .hero-section .flex-container-2 button {
   padding: 0 1rem;
@@ -51,10 +58,245 @@
   font-weight: 400;
   font-size: 0.875rem;
   display: inline;
-  background: var(--gray);
+  background: rgb(102 105 174 / 7%);
+  color: var(--purple);
+  /* border: 1px solid red; */
 }
-.hero-section .flex-container-2 > * {
+/* .hero-section .flex-container-2 > * {
   border: 1px solid green;
+} */
+.hero-section .flex-container-2 .grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 15px;
+}
+.hero-section .flex-container-2 .grid-container > * {
+  background: #d9d9d9;
+  border: 1px solid #d9d9d9;
+}
+.hero-section .flex-container-2 .grid-container img {
+  height: 100%;
+  object-fit: cover;
+}
+.hero-section .flex-container-2 .grid-container > :first-child {
+  border-radius: 22px 0 0 0;
+}
+.hero-section .flex-container-2 .grid-container > :nth-child(2) {
+  grid-area: 1/2/3/3;
+  border-radius: 0 22px 22px 0;
+}
+.hero-section .flex-container-2 .grid-container > :last-child {
+  border-radius: 0 0 0 22px;
+}
+
+/* ===============About us styles============== */
+/* .aboutus-section {
+  border: 1px solid red;
+} */
+.aboutus-section .flex-container-2 {
+  align-items: flex-start;
+}
+/* .aboutus-section .flex-container-2 > :first-child {
+  border: 1px solid green;
+} */
+.aboutus-section .flex-container-2 .img-container {
+  border-radius: 12px;
+  position: relative;
+}
+.aboutus-section .flex-container-2 .img-container::before {
+  position: absolute;
+  bottom: -25px;
+  left: -20px;
+  content: "";
+  display: inline-block;
+  height: 266px;
+  width: 284px;
+  background: var(--frame-color);
+  z-index: -1;
+}
+.aboutus-section .flex-container-2 > :last-child {
+  position: relative;
+}
+.aboutus-section .flex-container-2 > :last-child::before {
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  content: url(../../public/icons/aboutus-ellipse-sm.svg);
+  /* content: ""; */
+  display: inline-block;
+}
+.aboutus-section .flex-container-2 .img-container::after {
+  position: absolute;
+  top: -45px;
+  left: -50px;
+  content: url(../../public/icons/aboutus-ellipse.svg);
+  /* content: ""; */
+  display: inline-block;
+}
+
+/* ===============Services============ */
+.our-services {
+  position: relative;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.our-services h3,
+.our-services h6,
+.our-services p {
+  color: #fff;
+}
+.our-services h3 {
+  font-family: "Inknut Antiqua", serif;
+  font-size: 3rem;
+}
+.our-services h6 {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.our-services p {
+  font-weight: 400;
+  font-size: 0.825rem;
+}
+.our-services .flex-container-2 {
+  align-items: flex-end;
+}
+
+.our-services .item-container {
+  margin-bottom: 2.8rem;
+}
+.our-services .item-container:last-child {
+  margin-bottom: 0;
+}
+.our-services .icon-container {
+  display: inline-block;
+}
+.our-services::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: url(../../public/assets/services-img-banner.svg) no-repeat
+    center/cover;
+  z-index: -1;
+}
+
+/* ===============Amenities============ */
+/* .amenities {
+  border: 1px solid red;
+} */
+.amenities h3 {
+  text-align: center;
+}
+/* .amenities h5 {
+  border: 1px solid blue;
+} */
+.amenities .icon-container {
+  display: inline-block;
+}
+.amenities .grid-container-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+/* ===============event and booking============ */
+.event-and-booking {
+  position: relative;
+}
+.event-and-booking::before,
+.event-and-booking::after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-0%, -50%);
+  content: "";
+  height: 150px;
+  width: 25px;
+  background: var(--frame-color);
+}
+.event-and-booking::after {
+  right: 0;
+  left: auto;
+}
+
+.event-and-booking p {
+  line-height: auto;
+  text-align: left;
+}
+.event-and-booking .flex-container-2 {
+  align-items: center;
+}
+.event-and-booking .form-container {
+  border: 1px solid var(--purple);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.event-and-booking .form-container input,
+.event-and-booking .form-container textarea {
+  border: 1px solid var(--purple);
+  color: #000;
+}
+.event-and-booking .form-container button {
+  border: 1px solid;
+  width: 100%;
+  text-align: center;
+  background: #888062;
+  padding: 0;
+  color: #fff;
+  font-size: 0.9375rem;
+  border-radius: 8px;
+  font-weight: 400;
+}
+.event-and-booking .form-field {
+  margin-bottom: 1rem;
+}
+.event-and-booking .form-field label {
+  font-size: 0.625rem;
+  color: #6669ae;
+  margin-bottom: 0;
+}
+
+.event-and-booking .double.two {
+  align-items: center;
+}
+
+/* ===============Photo Studio============ */
+.photo-studio h3 {
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.photo-studio .flex-container-2 .img-container {
+  position: relative;
+}
+.photo-studio .flex-container-2 .img-container::before {
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  content: "";
+  display: inline-block;
+  height: 280px;
+  width: 284px;
+  background: var(--frame-color);
+  z-index: -1;
+  border-radius: 0 21px 21px 0;
+}
+.photo-studio .flex-container-2 {
+  margin-top: 2.5rem;
+}
+.photo-studio .cta-btn {
+  display: block;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid var(--purple);
+  color: var(--purple);
+  padding: 0.25rem;
+}
+.photo-studio .cta-btn.active {
+  background: var(--dk-brown);
+  color: #fff;
+  border: 1px solid transparent;
 }
 
 /* ==============================
@@ -62,10 +304,59 @@
 ================================*/
 @media (min-width: 980px) {
   .hero-section h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 900;
   }
   .hero-section h2 {
-    font-size: 2.5rem;
+    font-size: 2.875rem;
+  }
+  .our-services .flex-container-2 > :first-child {
+    text-align: right;
+  }
+  .event-and-booking h3 {
+    text-align: center;
+  }
+  .amenities .grid-container-3 {
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+  .amenities .grid-container-3 > * {
+    margin-bottom: 2.8rem;
+  }
+  .event-and-booking h2 {
+    text-align: initial;
+  }
+  /* ----------------Event and Booking------------ */
+  .event-and-booking .double.two .form-field:first-child {
+    flex-basis: 22%;
+    margin-right: auto;
+  }
+  .event-and-booking .double.two .form-field:last-child {
+    flex-basis: 58%;
+  }
+  .photo-studio .flex-container-2 .img-container::before {
+    height: 441px;
+  }
+}
+
+/* 
+============================
+Large Desktop
+============================*/
+@media (min-width: 1200px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  .hero-section h2 {
+    font-size: 3.75rem;
+  }
+  .our-services h3 {
+    font-size: 6rem;
+  }
+  .our-services h6 {
+    font-size: 1.5rem;
+  }
+  .our-services p {
+    font-size: 1.25rem;
   }
 }

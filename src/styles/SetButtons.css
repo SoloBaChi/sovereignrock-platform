@@ -1,30 +1,23 @@
 /* ================================
 Set Button Styles
 =====================================*/
-/* #set-btns-container .flex-container{
-}
-#set-btns-container .flex-container > * {
-  flex-basis: 48%;
-} */
+
 #set-btns-container a {
   padding: 0;
-  display: block;
+  /* display: inline-block; */
   margin-bottom: 1rem;
 }
 #set-btns-container button {
   font-size: 0.875rem;
   font-weight: 900;
-  padding: 0.25rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   border-radius: 8px;
   border: 1px solid var(--gray);
   background: none;
   transition: all 0.5s ease;
-  /* margin-right: 0.4rem; */
   width: 100%;
+  height: 55px;
   display: flex;
-  /* flex-flow: row wrap; */
-  /* align-items: flex-end; */
-  /* gap: 0.875rem; */
   color: var(--gray);
 }
 #set-btns-container button .flex-wrapper {
@@ -32,17 +25,16 @@ Set Button Styles
   display: flex;
   align-items: flex-start;
   margin-bottom: 0;
-  gap: 0.875rem;
+  gap: 0.25rem;
 }
 #set-btns-container button.active {
-  background: var(--secondary-color);
+  background: var(--dk-brown);
   transition: 0.5s ease;
   border: 1px solid transparent;
   color: #fff;
-  padding: 0.35rem 1.35rem;
 }
 #set-btns-container .icon-container svg path {
-  fill: var(--gray);
+  fill: var(--purple);
 }
 #set-btns-container button.active .icon-container svg path {
   fill: var(--white-color);
@@ -52,22 +44,16 @@ Set Button Styles
 Tablet device
 ====================================*/
 @media (min-width: 710px) {
+  #set-btns-container a {
+    margin-bottom: 0;
+  }
+
   #set-btns-container .flex-container {
-    border-radius: 8px;
-    justify-content: space-between;
     display: flex;
-    align-items: center;
     gap: 4%;
+    align-items: center;
   }
   #set-btns-container .flex-container > * {
     flex-basis: 48%;
-  }
-  #set-btns-container a {
-    /* display: inline-block; */
-    /* margin-bottom: 0; */
-  }
-  #set-btns-container button {
-    /* width: auto; */
-    /* display: inline-block; */
   }
 }
