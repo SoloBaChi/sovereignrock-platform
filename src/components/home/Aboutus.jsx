@@ -2,7 +2,7 @@ import React from "react";
 
 function Aboutus(props) {
   return (
-    <section className="aboutus-section">
+    <section className="aboutus-section" id="aboutus">
       <div className="flex-container-2">
         <div className="flex-item">
           <div className="img-container">

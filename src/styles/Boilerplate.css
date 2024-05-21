@@ -182,6 +182,12 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 25px;
   height: 25px;
 }
+
+/* ==============Message info============ */
+.form-container .error-message {
+  color: var(--gold);
+  font-size: 0.875rem;
+}
 /*============ Flex and Grid Items================ */
 .grid-container-2 > *,
 .grid-container-3 > *,

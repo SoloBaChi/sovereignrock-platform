@@ -2,7 +2,7 @@ import React from "react";
 
 function EventCenterForm(props) {
   return (
-    <section className="event-booking-section">
+    <section className="event-booking-section" id="booking-form">
       <div className="form-container booking-form event-center">
         <h3>
           book <br /> event center

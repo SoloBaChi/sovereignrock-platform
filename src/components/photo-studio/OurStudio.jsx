@@ -2,7 +2,7 @@ import React from "react";
 import StudioIcon from "../icons/StudioIcon";
 import { Link } from "react-router-dom";
 
-function OurStudio(props) {
+function OurStudio({ handleItemClick }) {
   return (
     <section className="our-event our-studio">
       <div className="img-container">
@@ -22,12 +22,20 @@ function OurStudio(props) {
       <div className="cta-btn-container">
         <div className="flex-container-2">
           <div className="flex-item">
-            <Link className="cta-btn  active" to="/#tour">
+            <Link
+              className="cta-btn  active"
+              onClick={() => handleItemClick("tour")}
+              to="#"
+            >
               shedule a tour
             </Link>
           </div>
           <div className="flex-item">
-            <Link className="cta-btn" to="/studio">
+            <Link
+              className="cta-btn"
+              onClick={() => handleItemClick("booking-form")}
+              to="#"
+            >
               book photo studio
             </Link>
           </div>

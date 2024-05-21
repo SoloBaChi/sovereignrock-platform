@@ -1,10 +1,10 @@
 import React from "react";
 import Navbar from "./Navbar";
 
-function Header(props) {
+function Header({ handleItemClick }) {
   return (
     <div className="header-container">
-      <Navbar />
+      <Navbar handleItemClick={handleItemClick} />
     </div>
   );
 }

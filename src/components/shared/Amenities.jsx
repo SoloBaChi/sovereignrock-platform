@@ -2,7 +2,7 @@ import React from "react";
 
 function Amenities(props) {
   return (
-    <section className="amenities">
+    <section className="amenities" id="amenities">
       <h3>amenities</h3>
       <div className="flex-wrapper">
         <div className="grid-container-3">

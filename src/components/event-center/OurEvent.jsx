@@ -2,7 +2,7 @@ import React from "react";
 import DateOfEventIcon from "../icons/DateOfEventIcon";
 import { Link } from "react-router-dom";
 
-function OurEvent(props) {
+function OurEvent({ handleItemClick }) {
   return (
     <section className="our-event">
       <div className="img-container">
@@ -22,12 +22,20 @@ function OurEvent(props) {
       <div className="cta-btn-container">
         <div className="flex-container-2">
           <div className="flex-item">
-            <Link className="cta-btn  active" to="/#tour">
+            <Link
+              className="cta-btn  active"
+              onClick={() => handleItemClick("tour")}
+              to="#"
+            >
               shedule a tour
             </Link>
           </div>
           <div className="flex-item">
-            <Link className="cta-btn" to="/events">
+            <Link
+              className="cta-btn"
+              onClick={() => handleItemClick("booking-form")}
+              to="#"
+            >
               book event
             </Link>
           </div>

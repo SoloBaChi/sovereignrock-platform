@@ -6,6 +6,7 @@ import EventAndBooking from "./EventAndBooking";
 import PhotoStudio from "./PhotoStudio";
 import Amenities from "../shared/Amenities";
 import Services from "./Services";
+import Rentals from "./Rentals";
 
 function Home(props) {
   return (
@@ -16,6 +17,7 @@ function Home(props) {
       <Amenities />
       <EventAndBooking />
       <PhotoStudio />
+      <Rentals />
       {/* <Footer /> */}
     </div>
   );

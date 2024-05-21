@@ -5,7 +5,8 @@ import Amenities from "../shared/Amenities";
 import EventCenterForm from "./EventCenterForm";
 import OurEvent from "./OurEvent";
 
-function EventCenter(props) {
+
+function EventCenter({ handleItemClick }) {
   return (
     <div className="event-center-page">
       {/* The Rotating Circle Code goes here */}
@@ -16,8 +17,8 @@ function EventCenter(props) {
         img4={`/events/img-4.svg`}
         alt={"event label"}
       />
-      <OurEvent />
-      <EventCenterForm  />
+      <OurEvent handleItemClick={handleItemClick} />
+      <EventCenterForm />
       <Amenities />
 
       <Link to="/">

@@ -3,7 +3,7 @@ import MenuBarIcon from "../icons/MenuBarIcon";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
 
-function Navbar(props) {
+function Navbar({handleItemClick}) {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggleMenu = () => {
     setToggleMenu((prev) => !prev);
@@ -13,7 +13,11 @@ function Navbar(props) {
       <div className="flex-container-2">
         <div className="flex-item">
           <Link to="/" className="logo-container">
-            <img src={`/assets/logo-Image.jpg`} alt="sovereign rock logo" />
+            <img
+              src={`/launch-assets/images/sovereignrock-simple.png`}
+              alt="sovereign rock"
+            />
+            {/* <img src={`/assets/logo-Image.jpg`} alt="sovereign rock logo" /> */}
           </Link>
         </div>
         <div className="flex-item">
@@ -25,7 +29,7 @@ function Navbar(props) {
           className={toggleMenu ? "nav-menu active" : " nav-menu"}
           onClick={handleToggleMenu}
         >
-          <Menu />
+          <Menu handleItemClick={handleItemClick} />
         </nav>
       </div>
     </div>

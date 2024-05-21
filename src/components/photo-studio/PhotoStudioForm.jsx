@@ -2,7 +2,7 @@ import React from "react";
 
 function PhotoStudioForm(props) {
   return (
-    <section className="studio-booking-section">
+    <section className="studio-booking-section" id="booking-form">
       <div className="form-container booking-form photo-studio">
         <h3>
           book <br /> photo studio

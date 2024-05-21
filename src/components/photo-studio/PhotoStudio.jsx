@@ -5,7 +5,7 @@ import Amenities from "../shared/Amenities";
 import OurStudio from "./OurStudio";
 import PhotoStudioForm from "./PhotoStudioForm";
 
-function PhotoStudio(props) {
+function PhotoStudio({ handleItemClick }) {
   return (
     <div className="photo-studio-page">
       <Gallery
@@ -15,7 +15,7 @@ function PhotoStudio(props) {
         img4={`/photo-studio/img-4.svg`}
         alt={"studio label"}
       />
-      <OurStudio />
+      <OurStudio handleItemClick={handleItemClick} />
       <PhotoStudioForm />
       <Amenities />
       <Link to="/">

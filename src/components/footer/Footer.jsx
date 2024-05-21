@@ -2,14 +2,12 @@ import React from "react";
 import Contactus from "../shared/Contactus";
 import InstagramIcon from "../icons/InstagramIcon";
 import FbIcon from "../icons/FbIcon";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 
 function Footer(props) {
-  const notificationMsg = (msg) => {
-    return toast.success(msg);
-  };
+  // const navigate = useNavigate();
   return (
     <footer className="footer-container">
       <section className="footer-section">
@@ -38,15 +36,6 @@ function Footer(props) {
             <div className="contactus-container" id="tour">
               <h4>contact us / schedule a tour</h4>
               <Contactus />
-              <div className="toastify-btn-container">
-                <button
-                  className="toastify-btn"
-                  onClick={() => notificationMsg("submitted successfully")}
-                >
-                  submit
-                </button>
-                <ToastContainer />
-              </div>
             </div>
           </div>
           <div className="flex-item">

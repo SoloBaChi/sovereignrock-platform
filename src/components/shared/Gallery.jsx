@@ -6,7 +6,7 @@ function Gallery({ img1, img2, img3, img4, alt }) {
     setShowMorePhotos((prev) => !prev);
   };
   return (
-    <section className="gallery">
+    <section className="gallery" id="gallery">
       <h3>gallery</h3>
       <div className="photo-grid">
         <div className="grid-container">

@@ -3,7 +3,7 @@ import GeneralBooking from "./GeneralBooking";
 
 function EventAndBooking(props) {
   return (
-    <section className="event-and-booking">
+    <section className="event-and-booking" id="bookings">
       <div className="flex-container-2">
         <div className="flex-item">
           <h3>event center</h3>

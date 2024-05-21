@@ -1,7 +1,7 @@
 /* =============Header Styles goes Here========== */
 .header-container {
   /* border: 1px solid red; */
-  padding: 1rem;
+  padding: 1rem 1.8rem;
   position: relative;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
   /* position: fixed;
@@ -33,9 +33,10 @@
   color: var(--black-color);
 }
 .header-container .logo-container {
-  width: 54px;
-  height: 54px;
+  width: 58px;
+  height:58px;
   padding: 0;
+  display: inline-block;
 }
 
 /* ===============Navbar Styles================== */

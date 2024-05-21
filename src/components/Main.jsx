@@ -6,6 +6,7 @@ import Header from "./header/Header";
 import EventCenter from "./event-center/EventCenter";
 import PhotoStudio from "./photo-studio/PhotoStudio";
 import Footer from "./footer/Footer";
+import SucessfulSubmit from "./shared/SucessfulSubmit";
 
 const NotFound = () => {
   return (
@@ -19,14 +20,28 @@ const NotFound = () => {
 };
 
 function Main(props) {
+  const handleItemClick = (sectionId) => {
+    // scroll to the corresponding section
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <>
       <Router>
-        <Header />
+        <Header handleItemClick={handleItemClick} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="events" element={<EventCenter />} />
-          <Route path="studio" element={<PhotoStudio />} />
+          <Route
+            path="events"
+            element={<EventCenter handleItemClick={handleItemClick} />}
+          />
+          <Route
+            path="studio"
+            element={<PhotoStudio handleItemClick={handleItemClick} />}
+          />
+          <Route path="successful-submit" element={<SucessfulSubmit />} />
           {/* <LaunchCountDown/> */}
 
           {/* not found */}
