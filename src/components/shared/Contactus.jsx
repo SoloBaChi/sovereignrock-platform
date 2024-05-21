@@ -82,7 +82,7 @@ function Contactus(props) {
         throw new Error("Network response was not ok");
       }
     } catch (err) {
-      console.log("EROOR", err);
+      // console.log("EROOR", err);
     }
   };
 
