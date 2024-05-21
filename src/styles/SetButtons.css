@@ -1,0 +1,59 @@
+/* ================================
+Set Button Styles
+=====================================*/
+
+#set-btns-container a {
+  padding: 0;
+  /* display: inline-block; */
+  margin-bottom: 1rem;
+}
+#set-btns-container button {
+  font-size: 0.875rem;
+  font-weight: 900;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray);
+  background: none;
+  transition: all 0.5s ease;
+  width: 100%;
+  height: 55px;
+  display: flex;
+  color: var(--gray);
+}
+#set-btns-container button .flex-wrapper {
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 0;
+  gap: 0.25rem;
+}
+#set-btns-container button.active {
+  background: var(--dk-brown);
+  transition: 0.5s ease;
+  border: 1px solid transparent;
+  color: #fff;
+}
+#set-btns-container .icon-container svg path {
+  fill: var(--purple);
+}
+#set-btns-container button.active .icon-container svg path {
+  fill: var(--white-color);
+}
+
+/* ==================================
+Tablet device
+====================================*/
+@media (min-width: 710px) {
+  #set-btns-container a {
+    margin-bottom: 0;
+  }
+
+  #set-btns-container .flex-container {
+    display: flex;
+    gap: 4%;
+    align-items: center;
+  }
+  #set-btns-container .flex-container > * {
+    flex-basis: 48%;
+  }
+}

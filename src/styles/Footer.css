@@ -1,0 +1,67 @@
+/*Footer Styles */
+.footer-container {
+  color: #fff;
+  background: #57648c;
+}
+.toastify-btn-container button {
+  font-weight: 800;
+  font-size: 1rem;
+  background: initial;
+  color: #000;
+}
+.footer-container .flex-container-4 > * {
+  margin-bottom: 4.5rem;
+  flex-basis: 22%;
+}
+.footer-container .flex-container-4 > *:first-child {
+  flex-basis: 12%;
+}
+.footer-container .flex-container-4 > *:nth-child(2) {
+  flex-basis: 48%;
+  margin-right: auto;
+}
+.footer-container .flex-container-4 > *:last-child {
+  margin-bottom: 0;
+}
+.footer-container a,
+.footer-container p {
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+.footer-container h4,
+.footer-container h5 {
+  color: #fff;
+}
+.footer-container .cta-btn-container {
+  text-align: center;
+}
+
+.footer-container .flex-item-section:first-child {
+  margin: 2.4rem 0;
+}
+.footer-container .mail {
+  word-break: break-all;
+}
+.social-media-links .flex-container {
+  display: flex;
+  gap: 4%;
+  flex-flow: row wrap;
+}
+
+/* =========================================
+ For Desktop Device
+=============================================*/
+@media (min-width: 980px) {
+  .social-media-links .flex-container {
+    flex-flow: column wrap;
+  }
+  .social-media-links .flex-container > * {
+    margin-bottom: 1.2rem;
+  }
+  .footer-container .flex-container-4 > * {
+    margin-bottom: 0;
+  }
+}

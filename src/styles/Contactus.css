@@ -1,0 +1,37 @@
+/* Contact us Styles goes Here */
+.contact-us input,
+.contact-us textarea,
+.contact-us .cta-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+.contact-us textarea::placeholder {
+  color: #fff;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.contact-us input:focus,
+.contact-us textarea:focus {
+  border: 1px solid var(--primary-color);
+}
+.contact-us button {
+  color: #000;
+  background: initial;
+  border: none;
+}
+
+.contact-us .cta-btn {
+  font-weight: 800;
+  font-size: 0.7875rem;
+  border-radius: 8px;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+@media (min-width: 980px) {
+  /* .contact-us .cta-btn {
+    width: 100% !important;
+  } */
+}
