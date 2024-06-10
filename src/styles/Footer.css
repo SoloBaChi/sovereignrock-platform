@@ -1,9 +1,75 @@
 /*Footer Styles */
 .footer-container {
-  color: #fff;
-  background: #57648c;
+  background: #eceff0;
 }
-.toastify-btn-container button {
+.footer-container .flex-container-2 {
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+}
+.footer-container .flex-container-2 a {
+  padding: 0.5rem;
+}
+.footer-container .flex-container-2 > *:first-child {
+  flex-basis: 72%;
+}
+.footer-container .flex-container-2 > *:last-child {
+  flex-basis: 22%;
+  border-top: 1px solid var(--black-color);
+}
+.footer-container .flex-container-2 .inner-flex > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.footer-container .logo-container {
+  width: 73px;
+  height: 74px;
+}
+.copy-right {
+  text-align: center;
+}
+.footer-container p {
+  font-weight: 600;
+}
+.footer-container .mail {
+  word-break: break-all;
+}
+.footer-container .icon-container {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  margin: 1.5rem auto;
+}
+.footer-container .footer-bottom {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+.footer-container .footer-bottom .inner-flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* ****List Menu  */
+.footer-container .footer-list-menu {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 4%;
+  align-items: flex-start;
+}
+.footer-container .footer-list-menu > * {
+  flex-basis: 48%;
+}
+.footer-container .footer-list-menu > *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.footer-container .footer-list-menu a {
+  font-weight: 400;
+}
+.footer-container .footer-list-menu > li > a {
+  font-weight: 600;
+}
+
+/* .toastify-btn-container button {
   font-weight: 800;
   font-size: 1rem;
   background: initial;
@@ -24,45 +90,34 @@
 .footer-container .flex-container-4 > *:last-child {
   margin-bottom: 0;
 }
-.footer-container a,
-.footer-container p {
-  color: #ffffff;
-  font-size: 0.875rem;
-  font-family: "Inter", sans-serif;
-  padding: 0;
-  margin-bottom: 0.5rem;
-}
-.footer-container h4,
-.footer-container h5 {
-  color: #fff;
-}
-.footer-container .cta-btn-container {
-  text-align: center;
-}
-
-.footer-container .flex-item-section:first-child {
-  margin: 2.4rem 0;
-}
-.footer-container .mail {
-  word-break: break-all;
-}
-.social-media-links .flex-container {
-  display: flex;
-  gap: 4%;
-  flex-flow: row wrap;
-}
+} */
 
 /* =========================================
  For Desktop Device
 =============================================*/
 @media (min-width: 980px) {
-  .social-media-links .flex-container {
-    flex-flow: column wrap;
+}
+
+/* =========================================
+ For Large Desktop Device
+=============================================*/
+@media (min-width: 980px) {
+  .footer-container .logo-container {
+    width: 114px;
+    height: 106px;
   }
-  .social-media-links .flex-container > * {
-    margin-bottom: 1.2rem;
+  .footer-container .flex-container-2 .inner-flex {
+    display: flex;
+    gap: 4%;
   }
-  .footer-container .flex-container-4 > * {
-    margin-bottom: 0;
+  .footer-container .flex-container-2 .inner-flex > * {
+    flex-basis: 72%;
+  }
+  .footer-container .flex-container-2 .inner-flex > :first-child {
+    flex-basis: 22%;
+  }
+  .footer-container .footer-list-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }

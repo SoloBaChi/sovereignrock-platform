@@ -5,19 +5,21 @@ import Aboutus from "./Aboutus";
 import EventAndBooking from "./EventAndBooking";
 import PhotoStudio from "./PhotoStudio";
 import Amenities from "../shared/Amenities";
-import Services from "./Services";
+// import Services from "./Services";
 import Rentals from "./Rentals";
+import OurServices from "./OurServices";
 
 function Home(props) {
   return (
     <div className="home-page">
       <HeroSection />
       <Aboutus />
-      <Services />
+      {/* <Services /> */}
       <Amenities />
       <EventAndBooking />
       <PhotoStudio />
       <Rentals />
+      <OurServices />
       {/* <Footer /> */}
     </div>
   );
