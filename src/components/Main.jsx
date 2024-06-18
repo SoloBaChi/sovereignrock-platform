@@ -7,6 +7,7 @@ import EventCenter from "./event-center/EventCenter";
 import PhotoStudio from "./photo-studio/PhotoStudio";
 import Footer from "./footer/Footer";
 import SucessfulSubmit from "./shared/SucessfulSubmit";
+import { Data } from "./shared/Data";
 
 const NotFound = () => {
   return (
@@ -20,6 +21,7 @@ const NotFound = () => {
 };
 
 function Main(props) {
+  console.log(Data);
   const handleItemClick = (sectionId) => {
     // scroll to the corresponding section
     const section = document.getElementById(sectionId);

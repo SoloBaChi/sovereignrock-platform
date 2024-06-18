@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Banner from "./Banner";
 
 function Header({ handleItemClick }) {
   return (
-    <div className="header-container">
+    <header className="header-container">
       <Navbar handleItemClick={handleItemClick} />
-    </div>
+      <Banner />
+    </header>
   );
 }
 
