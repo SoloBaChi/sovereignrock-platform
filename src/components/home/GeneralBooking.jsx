@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function GeneralBooking(props) {
@@ -281,11 +281,12 @@ name="entry.334216627_day"
             )}
           </div>
         </div>
-        <div className="cta-btn-container">
+        <div className="cta-btn-container toastify-btn">
           <button type="submit">
             {loading ? "Please wait..." : "book us today"}
           </button>
         </div>
+        <ToastContainer />
       </form>
     </div>
   );

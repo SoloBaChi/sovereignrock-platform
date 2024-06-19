@@ -118,38 +118,40 @@ function ScheduleTour(props) {
     }
   };
   return (
-    <div className="tour-section">
+    <section className="tour-section">
+      <h2>Schedule a tour</h2>
       <div className="tour-container">
-        <div className="form-container contact-us" id="contactus">
+        <div className="form-container contact-us">
           <form className="form-wrapper" onSubmit={handleSubmit}>
-            <div className="double">
-              <div className="form-field">
-                <label htmlFor="firstName">first name</label>
-                <input
-                  type="text"
-                  id="firstname"
-                  name="firstName"
-                  onChange={handleChange}
-                  value={formData.firstName}
-                />
-                {errors.firstName && (
-                  <p className="error-message">{errors.firstName}</p>
-                )}
-              </div>
-              <div className="form-field">
-                <label htmlFor="lastName">last name</label>
-                <input
-                  type="text"
-                  id="lastname"
-                  name="lastName"
-                  onChange={handleChange}
-                  value={formData.lastName}
-                />
-                {errors.lastName && (
-                  <p className="error-message">{errors.lastName}</p>
-                )}
-              </div>
+            <div className="form-field">
+              <label htmlFor="firstName">first name</label>
+              <input
+                type="text"
+                id="firstname"
+                name="firstName"
+                placeholder="Enter first name"
+                onChange={handleChange}
+                value={formData.firstName}
+              />
+              {errors.firstName && (
+                <p className="error-message">{errors.firstName}</p>
+              )}
             </div>
+            <div className="form-field">
+              <label htmlFor="lastName">last name</label>
+              <input
+                type="text"
+                id="lastname"
+                name="lastName"
+                placeholder="Enter last name"
+                onChange={handleChange}
+                value={formData.lastName}
+              />
+              {errors.lastName && (
+                <p className="error-message">{errors.lastName}</p>
+              )}
+            </div>
+
             <div className="single">
               <div className="form-field">
                 <label htmlFor="cellphone">cell phone</label>
@@ -159,6 +161,7 @@ function ScheduleTour(props) {
                   name="phone"
                   onChange={handleChange}
                   value={formData.phone}
+                  placeholder="Enter  your cellphone number"
                 />
                 {errors.phone && (
                   <p className="error-message">{errors.phone}</p>
@@ -184,7 +187,7 @@ function ScheduleTour(props) {
             </div>
             <div className="cta-btn-container">
               <button className="cta-btn" type="submit" disabled={loading}>
-                {loading ? "Please wait..." : "submit"}
+                {loading ? "Please wait..." : "Shedule a tour"}
               </button>
             </div>
             {/* {submitStatus && <p>{submitStatus}</p>} */}
@@ -192,7 +195,7 @@ function ScheduleTour(props) {
           <ToastContainer />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

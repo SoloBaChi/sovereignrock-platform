@@ -7,7 +7,7 @@
   color: #fff;
 }
 .contact-us textarea::placeholder {
-  color: #fff;
+  color: var(--black-color);
   text-align: center;
   font-size: 0.875rem;
   font-weight: 400;

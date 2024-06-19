@@ -34,13 +34,16 @@ function Main(props) {
       <Router>
         <Header handleItemClick={handleItemClick} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={<Home handleItemClick={handleItemClick} />}
+          />
           <Route
             path="events"
             element={<EventCenter handleItemClick={handleItemClick} />}
           />
           <Route
-            path="studio"
+            path="photo-studio"
             element={<PhotoStudio handleItemClick={handleItemClick} />}
           />
           <Route path="successful-submit" element={<SucessfulSubmit />} />

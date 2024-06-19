@@ -2,21 +2,26 @@ import React from "react";
 // import Footer from "../footer/Footer";
 import HeroSection from "./HeroSection";
 import EventAndBooking from "./EventAndBooking";
-import PhotoStudio from "./PhotoStudio";
+// import PhotoStudio from "./PhotoStudio";
 import Amenities from "../shared/Amenities";
 // import Services from "./Services";
-import Rentals from "./Rentals";
 import OurServices from "./OurServices";
+import OurPhotoStudio from "./OurPhotoStudio";
+import OurGallery from "./OurGallery";
+import ScheduleTour from "./ScheduleTour";
 
-function Home(props) {
+function Home({ handleItemClick }) {
   return (
     <div className="home-page">
-      <HeroSection />
+      <HeroSection handleItemClick={handleItemClick} />
       {/* <Services /> */}
       <Amenities />
       <EventAndBooking />
-      <PhotoStudio />
-      <Rentals />
+      {/* <PhotoStudio /> */}
+      <OurGallery />
+      <OurPhotoStudio />
+      <ScheduleTour />
+
       <OurServices />
       {/* <Footer /> */}
     </div>

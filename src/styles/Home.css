@@ -15,7 +15,7 @@
 
 .home-page .inner-flex {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 1.2rem;
 }
 .home-page .inner-flex > * {
@@ -24,6 +24,8 @@
 /* ----------Hero section-------- */
 .hero-section {
   background: #0b1215;
+  border-radius: 0 0 50px 50px;
+  padding-bottom: 100px;
 }
 .hero-section h1,
 .hero-section h2,
@@ -37,36 +39,67 @@
   margin-bottom: 1.5rem;
   font-size: 2rem;
 }
-
-.hero-section button {
-  padding: 0 1rem;
-  border-radius: 14px;
-  font-weight: 400;
-  font-size: 0.875rem;
-  display: inline;
-  color: var(--purple);
-  padding: 10px 24px 10px 16px;
-}
-.hero-section button.active {
-  background: linear-gradient(0deg, #1465b4, #1465b4),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
-}
-.hero-section .flex-container-2 > :first-child {
-  flex-basis: 66%;
-}
 .hero-section h5 {
   font-weight: 600;
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 24px;
-  text-align: right;
 }
-.hero-section .flex-container-2 > :first-child {
-  border: 1px solid yellow;
-  /* margin-top: -50px; */
+.home-page .btn {
+  border-radius: 8px;
+  font-weight: 400;
+  font-size: 0.875rem;
+  display: block;
+  color: var(--white-color);
+  background: var(--black-color);
+  border: 1px solid #79747e;
+  padding: 14px 24px 14px 16px;
+  /* margin-top: 0.85rem; */
+  text-transform: initial;
+  width: 100%;
+  width: 207px;
+}
+.home-page a .btn {
+  padding: auto;
+}
+.hero-section .btn.active {
+  background: linear-gradient(0deg, #1465b4, #1465b4),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
+  color: #fff;
+  border: none;
+}
+.hero-section .inner-flex {
+  margin-top: 1.5rem;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.hero-section .inner-flex > :first-child span,
+.hero-section .inner-flex > :last-child span,
+.photo-studio .btn span {
+  position: relative;
+}
+.hero-section .inner-flex > :last-child span::before,
+.hero-section .inner-flex > :first-child span::before,
+.photo-studio .btn span::before {
+  position: absolute;
+  top: 0;
+  left: -25px;
+  display: inline-block;
+  content: url(../../public/assets/icons/book-event-icon.svg);
+}
+.hero-section .inner-flex > :last-child span::before,
+.photo-studio .btn span::before {
+  content: url(../../public/assets/icons/photo-studio-icon.svg);
+}
+.hero-section > .flex-container-2 {
+  margin-top: -80px;
   position: relative;
   z-index: 1020;
+  padding: 10px 8px 20px 10px;
 }
-.hero-section .flex-container-2 > :last-child {
+.hero-section > .flex-container-2 > :first-child {
+  flex-basis: 66%;
+}
+.hero-section > .flex-container-2 > :last-child {
   flex-basis: 30%;
 }
 
@@ -78,7 +111,9 @@
 
 /* ===============About us styles============== */
 .aboutus-section {
+  padding: 89px 10px 10px 10px;
 }
+
 .aboutus-section p {
   font-size: 0.75rem;
   line-height: 20px;
@@ -173,6 +208,12 @@
   grid-template-columns: repeat(2, 1fr);
   place-items: center;
 }
+
+/* ==========Our Gallery======================= */
+/* .our-gallery{
+
+} */
+
 /* ===============event and booking============ */
 .event-and-booking {
   position: relative;
@@ -210,7 +251,7 @@
   border: 1px solid var(--purple);
   color: #000;
 }
-.event-and-booking .form-container button {
+.event-and-booking .cta-btn-container button {
   border: 1px solid;
   width: 100%;
   text-align: center;
@@ -234,48 +275,97 @@
   align-items: center;
 }
 
-/* ===============Photo Studio============ */
-.photo-studio h3 {
+/* =======================
+Our Gallery
+========================= */
+.our-gallery {
+  background: var(--black-color);
   margin-bottom: 0;
-  font-weight: 400;
-  line-height: 1.2;
 }
-.photo-studio .flex-container-2 .img-container {
-  position: relative;
+.our-gallery h2 {
+  color: #efece6;
 }
-.photo-studio .flex-container-2 .img-container::before {
-  position: absolute;
-  bottom: -30px;
-  left: -30px;
-  content: "";
-  display: inline-block;
-  height: 280px;
-  width: 284px;
-  background: var(--frame-color);
-  z-index: -1;
-  border-radius: 0 21px 21px 0;
+
+/* =======================
+Tour
+========================= */
+.tour-section {
+  background: var(--black-color);
 }
-.photo-studio .flex-container-2 {
-  margin-top: 2.5rem;
+.tour-section h2 {
+  color: #efece6;
 }
-.photo-studio .cta-btn {
-  display: block;
-  background: #fff;
-  border-radius: 4px;
-  border: 1px solid var(--purple);
-  color: var(--purple);
-  padding: 0.25rem;
+.tour-section .form-container {
+  background: #f8f7f4;
+  padding: 1rem 21px;
+  border-radius: 8px;
 }
-.photo-studio .cta-btn.active {
-  background: var(--dk-brown);
-  color: #fff;
-  border: 1px solid transparent;
+.tour-section .form-container label {
+  font-weight: 600;
+}
+.tour-section .form-container input,
+.tour-section .form-container textarea {
+  border: none;
+  color: var(--black-color);
+}
+.tour-section .form-container textarea {
+  border: 1px solid #79747e;
+}
+.tour-section .form-container button {
+  background: #1465b4;
+}
+/* =======================
+Our Photo Studio
+========================= */
+.photo-studio {
+  background: url(../../public/assets/images/homepg-studio-bg.svg) no-repeat top
+    left/cover;
+}
+.photo-studio button.btn {
+  background: linear-gradient(0deg, #1465b4, #1465b4),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
+  border: none;
+  margin-top: 1.5rem;
+}
+.photo-studio p {
+  color: #efece6;
+  font-style: normal;
+  line-height: 26px;
+  font-weight: 500;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.875rem;
+}
+.photo-studio h2 {
+  color: #efece6;
+}
+
+/* ==============================
+ Tablet Device
+================================*/
+@media (min-width: 710px) {
+  .hero-section .inner-flex {
+    align-items: flex-start;
+    flex-flow: row wrap;
+  }
+  .hero-section .inner-flex > * {
+    flex-basis: auto;
+  }
 }
 
 /* ==============================
  Desktop Device
 ================================*/
 @media (min-width: 980px) {
+  .hero-section h5 {
+    text-align: right;
+  }
+  .hero-section > .flex-container-2 {
+    margin-top: -100px;
+  }
+  .hero-section button {
+    font-size: 1rem;
+  }
+
   .aboutus-section .flex-container-2 {
     flex-flow: row wrap;
   }
@@ -286,6 +376,7 @@
     border-radius: 23px 0 0 23px;
     order: 1;
   }
+
   .event-and-booking h3 {
     text-align: center;
   }
@@ -307,8 +398,12 @@
   .event-and-booking .double.two .form-field:last-child {
     flex-basis: 58%;
   }
-  .photo-studio .flex-container-2 .img-container::before {
-    height: 441px;
+  .our-gallery h2 {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .tour-section h2 {
+    text-align: center;
   }
 }
 
@@ -317,11 +412,20 @@
 Large Desktop
 ============================*/
 @media (min-width: 1200px) {
+  .hero-section > .flex-container-2 {
+    margin-top: -120px;
+  }
   .aboutus-section p {
     font-size: 1.25rem;
     line-height: 36px;
   }
   .our-services button {
     font-size: 1.35rem;
+  }
+  .photo-studio p {
+    font-size: 1.25rem;
+  }
+  .our-gallery h2 {
+    font-size: 6rem;
   }
 }

@@ -14,7 +14,6 @@ function Navbar({ handleItemClick }) {
         <div className="flex-item">
           <Link to="/" className="logo-container">
             <img src={`/assets/images/site-logo.svg`} alt="sovereign rock" />
-            {/* <img src={`/assets/logo-Image.jpg`} alt="sovereign rock logo" /> */}
           </Link>
         </div>
         <div className="flex-item">

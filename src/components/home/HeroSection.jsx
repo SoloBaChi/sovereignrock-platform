@@ -4,7 +4,7 @@ import DateOfEventIcon from "../icons/DateOfEventIcon";
 import StudioIcon from "../icons/StudioIcon";
 import Aboutus from "./Aboutus";
 
-function HeroSection(props) {
+function HeroSection({ handleItemClick }) {
   const handleHover = (e) => {
     const target = e.target;
     if (!target.classList.contains("active")) {
@@ -80,26 +80,35 @@ function HeroSection(props) {
             Sovereign Rock Event Center and Photo Studio, where dreams come true
           </h1>
           <h3>where dreams come true</h3>
-          <div className="cta-btn-container">
-            <div className="inner-flex">
-              <div className="flex-item">
-                <button>
-                  <span>book an event</span>
-                </button>
-              </div>
-              <div className="flex-item">
-                <button>
-                  <span>photo studio</span>
-                </button>
-              </div>
-            </div>
-          </div>
         </div>
         <div className="flex-item">
           <h5>
             We will make your dream about your special event become a reality
-            and an everlasting memory
+            and an everlasting memory.
           </h5>
+        </div>
+      </div>
+      <div className="cta-btn-container">
+        <div className="inner-flex">
+          <div className="flex-item">
+            <Link to="/events">
+              <button
+                // onClick={() => {
+                //   handleItemClick("book-event");
+                // }}
+                className="active btn"
+              >
+                <span>Book an event</span>
+              </button>
+            </Link>
+          </div>
+          <div className="flex-item">
+            <Link to="/photo-studio">
+              <button className="btn">
+                <span>Photo studio</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
       <Aboutus />
