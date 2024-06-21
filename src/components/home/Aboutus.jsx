@@ -5,20 +5,7 @@ function Aboutus(props) {
     <section className="aboutus-section" id="aboutus">
       <div className="flex-container-2">
         <div className="flex-item">
-          <div className="img-container">
-            <img
-              src={`/assets/banner-image.jpg`}
-              alt="sovereign rock building"
-            />
-          </div>
-        </div>
-        <div className="flex-item">
-          <div className="inner-flex">
-            <div className="icon-container">
-              <img src={`/icons/aboutus-avatar.svg`} alt="about us" />
-            </div>
-            <h3>about us</h3>
-          </div>
+          <h2>about us</h2>
           <p>
             We are located in the DFW area and our mission is to transform your
             events into lifelong memorable occasions. Our vision is to be a
@@ -28,6 +15,14 @@ function Aboutus(props) {
             studio. We can adapt our venue to suit your specific event and cater
             for your unique needs.
           </p>
+        </div>
+        <div className="flex-item">
+          <div className="img-container">
+            <img
+              src={`/assets/aboutus-hero-img.svg`}
+              alt="sovereign rock building"
+            />
+          </div>
         </div>
       </div>
     </section>

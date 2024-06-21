@@ -7,6 +7,7 @@ import EventCenter from "./event-center/EventCenter";
 import PhotoStudio from "./photo-studio/PhotoStudio";
 import Footer from "./footer/Footer";
 import SucessfulSubmit from "./shared/SucessfulSubmit";
+import { Data } from "./shared/Data";
 
 const NotFound = () => {
   return (
@@ -20,6 +21,7 @@ const NotFound = () => {
 };
 
 function Main(props) {
+  console.log(Data);
   const handleItemClick = (sectionId) => {
     // scroll to the corresponding section
     const section = document.getElementById(sectionId);
@@ -30,15 +32,23 @@ function Main(props) {
   return (
     <>
       <Router>
-        <Header handleItemClick={handleItemClick} />
+        <Header handleItemClick={handleItemClick} banner={Data[0].banner} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                handleItemClick={handleItemClick}
+                amenities={Data[0].amenities}
+              />
+            }
+          />
           <Route
             path="events"
             element={<EventCenter handleItemClick={handleItemClick} />}
           />
           <Route
-            path="studio"
+            path="photo-studio"
             element={<PhotoStudio handleItemClick={handleItemClick} />}
           />
           <Route path="successful-submit" element={<SucessfulSubmit />} />

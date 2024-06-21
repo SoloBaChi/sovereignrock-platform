@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Gallery from "../shared/Gallery";
-import Amenities from "../shared/Amenities";
+import Amenities from "../amenities/Amenities";
 import OurStudio from "./OurStudio";
 import PhotoStudioForm from "./PhotoStudioForm";
 

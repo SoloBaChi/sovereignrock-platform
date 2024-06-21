@@ -1,23 +1,20 @@
 import React from "react";
-// import Footer from "../footer/Footer";
 import HeroSection from "./HeroSection";
-import Aboutus from "./Aboutus";
-import EventAndBooking from "./EventAndBooking";
-import PhotoStudio from "./PhotoStudio";
-import Amenities from "../shared/Amenities";
-import Services from "./Services";
-import Rentals from "./Rentals";
+import Amenities from "../amenities/Amenities";
+import OurServices from "./OurServices";
+import OurPhotoStudio from "./OurPhotoStudio";
+import OurGallery from "./OurGallery";
+import ScheduleTour from "./ScheduleTour";
 
-function Home(props) {
+function Home({ handleItemClick, amenities, banner }) {
   return (
     <div className="home-page">
-      <HeroSection />
-      <Aboutus />
-      <Services />
-      <Amenities />
-      <EventAndBooking />
-      <PhotoStudio />
-      <Rentals />
+      <HeroSection handleItemClick={handleItemClick} />
+      <Amenities amenities={amenities} />
+      <OurServices />
+      <OurGallery />
+      <OurPhotoStudio />
+      <ScheduleTour />
       {/* <Footer /> */}
     </div>
   );
