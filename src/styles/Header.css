@@ -22,6 +22,11 @@
   border-radius: 8px; */
   /* position: relative;
   z-index:1020; */
+  vertical-align: middle;
+}
+.header-container .togglebar {
+  display: flex;
+  align-items: center;
 }
 .header-container .close-icon {
   position: absolute;
@@ -123,5 +128,11 @@
   /* ===============Menu Styles================== */
   .menu-container {
     width: 260px;
+  }
+  .header-container .togglebar {
+    color: #fff;
+  }
+  .header-container .togglebar svg path {
+    stroke: #fff;
   }
 }

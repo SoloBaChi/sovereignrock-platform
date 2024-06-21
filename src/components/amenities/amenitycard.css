@@ -1,0 +1,83 @@
+/* 
+==========================================
+This style is specificlly for the  cards
+==========================================
+*/
+
+.amenity-card {
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  padding: 0.875rem;
+}
+.card-container {
+  border-radius: 8px;
+}
+
+.amenity-card .img-container {
+  border-radius: inherit;
+}
+.amenity-card .img-container img {
+  transition: 0.5s ease;
+  transform: scale(1) !important;
+}
+.amenity-card:hover .img-container img {
+  transform: scale(1.1) !important;
+}
+
+.amenity-card figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  z-index: 1010;
+  text-align: center;
+  padding: 0.7rem;
+}
+.amenity-card .title {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.amenities p {
+  text-align: center;
+}
+
+.control-btn .next,
+.control-btn .prev {
+  position: absolute;
+  top: 35%;
+  width: 96px;
+  height: 72px;
+  /* line-height: 45px; */
+  background: #fbfff4;
+  border-radius: 12px;
+  transition: 0.5s;
+  z-index: 5;
+}
+.control-btn .prev {
+  left: -20px;
+  border: 1px solid #fbfff4;
+  background: none;
+}
+.control-btn .next {
+  right: -20px;
+}
+.control-btn .next span {
+  position: relative;
+}
+
+.control-btn .next span.icon,
+.control-btn .prev span.icon {
+  color: #fff;
+  transition: 0.5s;
+  /* font-size: 20px; */
+}
+.control-btn .next:hover,
+.control-btn .prev:hover {
+  cursor: pointer;
+}

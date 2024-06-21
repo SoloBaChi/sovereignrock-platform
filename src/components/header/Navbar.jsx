@@ -18,7 +18,10 @@ function Navbar({ handleItemClick }) {
         </div>
         <div className="flex-item">
           <span className="togglebar" onClick={handleToggleMenu}>
-            <MenuBarIcon />
+            <span>Menu</span>
+            <span>
+              <MenuBarIcon />
+            </span>
           </span>
         </div>
       </div>

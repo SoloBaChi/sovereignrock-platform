@@ -104,9 +104,9 @@
 }
 
 /* ===============Banner section styles============== */
-.banner-section {
-  height: 150px;
-  border: 1px solid blue;
+.banner-section .img-container {
+  min-height: 340px;
+  overflow: hidden;
 }
 
 /* ===============About us styles============== */
@@ -167,15 +167,13 @@
 /* .aboutus-section .flex-container-2 > :first-child {
   border: 1px solid green;
 } */
-.aboutus-section .flex-container-2 .img-container {
-  /* border-radius: 12px;
-  position: relative; */
+
+/* ===========================
+   Our Services
+==============================*/
+.our-services {
+  background: #fff;
 }
-
-/* ===============Our Services============ */
-/* .our-services {
-
-} */
 
 .our-services button {
   background: none;
@@ -190,10 +188,17 @@
   justify-content: space-between;
 }
 
-/* ===============Amenities============ */
-/* .amenities {
-  border: 1px solid red;
-} */
+/* =======================
+   Amenities
+=========================*/
+.amenities {
+  box-shadow: 0px 4px 12px 0px #77777726 inset;
+  background: #eceff0;
+  border-radius: 0px 0px 23px 23px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+}
+
 .amenities h3 {
   text-align: center;
 }
@@ -291,6 +296,7 @@ Tour
 ========================= */
 .tour-section {
   background: var(--black-color);
+  padding: 94px 10px 48px 10px;
 }
 .tour-section h2 {
   color: #efece6;
@@ -305,14 +311,43 @@ Tour
 }
 .tour-section .form-container input,
 .tour-section .form-container textarea {
-  border: none;
   color: var(--black-color);
 }
 .tour-section .form-container textarea {
   border: 1px solid #79747e;
 }
-.tour-section .form-container button {
+.tour-section .form-container button[type="submit"] {
   background: #1465b4;
+}
+.tour-section .form-container input[type="date"] {
+  position: relative;
+  display: block;
+}
+.tour-section .form-container .pick-date {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  transform: translate(0%, -50%);
+  left: 0;
+  z-index: 1010;
+  text-align: right;
+  cursor: pointer;
+  font-weight: 600;
+}
+.tour-section
+  .form-container
+  input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  z-index: 1020;
+}
+.tour-section .form-container input[type="date"]::-webkit-inner-spin-button {
+  opacity: 0;
 }
 /* =======================
 Our Photo Studio
@@ -320,6 +355,7 @@ Our Photo Studio
 .photo-studio {
   background: url(../../public/assets/images/homepg-studio-bg.svg) no-repeat top
     left/cover;
+  margin-bottom: 0;
 }
 .photo-studio button.btn {
   background: linear-gradient(0deg, #1465b4, #1465b4),
@@ -365,6 +401,10 @@ Our Photo Studio
   .hero-section button {
     font-size: 1rem;
   }
+  .banner-section {
+    height: 489px;
+    overflow: hidden;
+  }
 
   .aboutus-section .flex-container-2 {
     flex-flow: row wrap;
@@ -405,6 +445,43 @@ Our Photo Studio
   .tour-section h2 {
     text-align: center;
   }
+  .tour-section .form-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2%;
+  }
+  .tour-section .form-wrapper .form-field {
+    margin-bottom: 0;
+  }
+  .tour-section .tour-container {
+    display: flex;
+  }
+  .tour-section .form-container {
+    margin: auto;
+    flex-basis: 80%;
+  }
+  .tour-section .form-wrapper > * {
+    flex-basis: 18%;
+  }
+  /* .tour-section .form-wrapper > :nth-child(4){
+  
+  } */
+  .tour-section .form-container input {
+    padding: 0.7rem 0;
+  }
+  .tour-section .form-container button[type="submit"] {
+    margin-top: 0.5rem;
+  }
+  .tour-section .form-container .pick-date {
+    font-size: 0.875rem;
+  }
+  /* .tour-section
+    .form-container
+    input[type="date"]::-webkit-calendar-picker-indicator {
+
+  } */
 }
 
 /* 

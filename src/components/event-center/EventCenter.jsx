@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Gallery from "../shared/Gallery";
-import Amenities from "../shared/Amenities";
+import Amenities from "../amenities/Amenities";
 import EventCenterForm from "./EventCenterForm";
 import OurEvent from "./OurEvent";
-
 
 function EventCenter({ handleItemClick }) {
   return (

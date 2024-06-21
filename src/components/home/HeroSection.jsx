@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import DateOfEventIcon from "../icons/DateOfEventIcon";
-import StudioIcon from "../icons/StudioIcon";
 import Aboutus from "./Aboutus";
 
 function HeroSection({ handleItemClick }) {

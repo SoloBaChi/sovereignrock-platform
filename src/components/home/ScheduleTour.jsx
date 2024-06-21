@@ -12,7 +12,7 @@ function ScheduleTour(props) {
     firstName: "",
     lastName: "",
     phone: "",
-    message: "",
+    sheduleDate: "",
   });
 
   const validateForm = () => {
@@ -26,8 +26,8 @@ function ScheduleTour(props) {
     if (!formData.phone) {
       formErrors.phone = "Phone Number is required !";
     }
-    if (!formData.message) {
-      formErrors.message = "Message is required !";
+    if (!formData.sheduleDate) {
+      formErrors.sheduleDate = "Date is required !";
     }
     return formErrors;
   };
@@ -55,7 +55,7 @@ function ScheduleTour(props) {
       firstName: "",
       lastName: "",
       phone: "",
-      message: "",
+      sheduleDate: "",
     });
   };
 
@@ -65,7 +65,7 @@ function ScheduleTour(props) {
       "entry.1623458267": formData.firstName,
       "entry.1481121674": formData.lastName,
       "entry.1265380812": formData.phone,
-      "entry.344760656": formData.message,
+      "entry.344760656": formData.sheduleDate,
     });
 
     // const response from the submission
@@ -168,26 +168,25 @@ function ScheduleTour(props) {
                 )}
               </div>
             </div>
-            <div className="text-area">
-              <div className="form-field">
-                <label htmlFor="message"></label>
-                <textarea
-                  name="message"
-                  id="msg"
-                  cols="24"
-                  rows="4"
-                  placeholder="Type Your Question/Message Here"
-                  onChange={handleChange}
-                  value={formData.message}
-                ></textarea>
-                {errors.message && (
-                  <p className="error-message">{errors.message}</p>
-                )}
-              </div>
+            <div className="form-field">
+              <label htmlFor="scheduleDate">when ?</label>
+              <input
+                type="date"
+                name="sheduleDate"
+                id="scheduleDate"
+                value={formData.sheduleDate}
+                onChange={handleChange}
+                placeholder="Pick a date"
+              />
+              <span className="pick-date">Pick a date</span>
+              {errors.sheduleDate && (
+                <p className="error-message">{errors.sheduleDate}</p>
+              )}
             </div>
+
             <div className="cta-btn-container">
               <button className="cta-btn" type="submit" disabled={loading}>
-                {loading ? "Please wait..." : "Shedule a tour"}
+                {loading ? "Please wait..." : "Schedule a tour"}
               </button>
             </div>
             {/* {submitStatus && <p>{submitStatus}</p>} */}

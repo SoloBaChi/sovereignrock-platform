@@ -32,11 +32,16 @@ function Main(props) {
   return (
     <>
       <Router>
-        <Header handleItemClick={handleItemClick} />
+        <Header handleItemClick={handleItemClick} banner={Data[0].banner} />
         <Routes>
           <Route
             path="/"
-            element={<Home handleItemClick={handleItemClick} />}
+            element={
+              <Home
+                handleItemClick={handleItemClick}
+                amenities={Data[0].amenities}
+              />
+            }
           />
           <Route
             path="events"

@@ -15,7 +15,39 @@ export const Data = [
       },
       {
         id: 3,
-        imgSrc: `/assets/banner/img_3.svg`,
+        imgSrc: `/assets/banner/img_0.svg`,
+      },
+      {
+        id: 4,
+        imgSrc: `/assets/banner/img_5.svg`,
+      },
+      {
+        id: 5,
+        imgSrc: `/assets/banner/img_6.svg`,
+      },
+      {
+        id: 6,
+        imgSrc: `/assets/banner/img_7.svg`,
+      },
+      {
+        id: 7,
+        imgSrc: `/assets/banner/img_6.svg`,
+      },
+      {
+        id: 8,
+        imgSrc: `/assets/banner/img_7.svg`,
+      },
+      {
+        id: 9,
+        imgSrc: `/assets/banner/img_2.svg`,
+      },
+      {
+        id: 10,
+        imgSrc: `/assets/banner/img_1.svg`,
+      },
+      {
+        id: 11,
+        imgSrc: `/assets/banner/img_2.svg`,
       },
     ],
     amenities: [
@@ -27,7 +59,7 @@ export const Data = [
       {
         id: 1,
         title: "clothing rack",
-        imgSrc: `/assets/amenities/clothing.svg`,
+        imgSrc: `/assets/amenities/clothing_rack.svg`,
       },
       {
         id: 2,
@@ -42,27 +74,27 @@ export const Data = [
       {
         id: 4,
         title: "lighting",
-        imgSrc: `/assets/amenities/lighting.svg`,
+        imgSrc: `/assets/amenities/wifi.svg`,
       },
       {
         id: 5,
         title: "Projector",
-        imgSrc: `/assets/amenities/projector.svg`,
+        imgSrc: `/assets/amenities/rest_room.svg`,
       },
       {
         id: 6,
         title: "Furniture",
-        imgSrc: `/assets/amenities/furniture.svg`,
+        imgSrc: `/assets/amenities/kitchen.svg`,
       },
       {
         id: 7,
         title: "Backdrop",
-        imgSrc: `/assets/amenities/backdrop.svg`,
+        imgSrc: `/assets/amenities/wifi.svg`,
       },
       {
         id: 8,
         title: "Photo Studio",
-        imgSrc: `/assets/amenities/photo_studio.svg`,
+        imgSrc: `/assets/amenities/clothing_rack.svg`,
       },
     ],
     services: {},
