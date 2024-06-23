@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 
 function Banner({ banner }) {
-  console.log(banner);
   const settings = {
     dots: false,
     infinite: true,

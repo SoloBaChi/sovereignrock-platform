@@ -1,0 +1,25 @@
+/* Contact us Styles */
+/* .contactus-page {
+  border: 1px solid red;
+} */
+.contactus-page a,
+.contactus-page p {
+  color: #fff;
+}
+.contactus-page p {
+  font-weight: 400;
+}
+.contactus-page a {
+  padding: 0.75rem 0;
+  color: #346bd4;
+}
+.contactus-page h2 {
+  margin-bottom: 2rem;
+}
+.contactus-page .flex-container-2 {
+  align-items: flex-start;
+}
+.contactus-page .inner-flex {
+  display: flex;
+  /* justify-content: center; */
+}

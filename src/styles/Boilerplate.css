@@ -112,6 +112,7 @@ p {
   color: var(--black-color);
   font-weight: 600;
   font-size: 0.875rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 section {
   padding: 1.5rem 5%;
@@ -132,27 +133,22 @@ button:not(.toastify-btn) {
 .secondary-btn {
   background: var(--dk-brown);
 }
-
 /* ============Form element Stykes========= */
-.form-container .double {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  gap: 4%;
-}
 .form-container .double > * {
-  flex-basis: 48%;
+  margin-bottom: 1.5rem;
 }
+
 .form-field {
   position: relative;
   border-radius: 5px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 .form-field label {
   text-transform: capitalize;
   margin-bottom: 0.45rem;
-  font-weight: 400;
+  font-weight: 600;
   display: block;
+  font-size: 0.875rem;
 }
 .form-field input,
 .form-field textarea {
@@ -214,6 +210,17 @@ For Desktop Device
   section {
     padding: 2rem 7%;
   }
+  /* ============Form element Stykes========= */
+  .form-container .double {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 4%;
+  }
+  .form-container .double > * {
+    flex-basis: 48%;
+  }
+
   .flex-container-4,
   .flex-container-2 {
     display: flex;
@@ -262,6 +269,9 @@ Large Desktop Device
     font-size: 2rem;
   }
   h5 {
+    font-size: 1rem;
+  }
+  .form-field label {
     font-size: 1rem;
   }
 }

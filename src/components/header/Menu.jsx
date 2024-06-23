@@ -12,15 +12,20 @@ function Menu({ handleItemClick }) {
           </span>
         </div>
         <li>
+          <Link to="/events" className="hero-btn">
+            <button className="active btn">
+              <span>Book an event</span>
+            </button>
+          </Link>
+        </li>
+        <li>
           <Link onClick={() => handleItemClick("aboutus")} to="#">
             about us
           </Link>
         </li>
+
         <li>
-          <Link to="/events">event center</Link>
-        </li>
-        <li>
-          <Link to="/studio">photo studio</Link>
+          <Link to="/photo-studio">photo studio</Link>
         </li>
         <li>
           <Link onClick={() => handleItemClick("services")} to="#">
@@ -43,18 +48,13 @@ function Menu({ handleItemClick }) {
           </Link>
         </li>
         <li>
-          <Link onClick={() => handleItemClick("contactus")} to="#">
-            contact us for questions / inquires
-          </Link>
+          <Link to="/contactus">contact us for questions / inquires</Link>
         </li>
         <li>
-          <Link onClick={() => handleItemClick("bookings")} to="#">
-            for booking
-          </Link>
+          <Link to="/photo-studio">for booking</Link>
         </li>
-
         <li>
-          <Link onClick={() => handleItemClick("rentals")} to="#">
+          <Link onClick={() => handleItemClick("services")} to="#">
             rentals
           </Link>
         </li>

@@ -1,0 +1,31 @@
+/* The styles was written for the gallery cards */
+
+.our-gallery {
+  padding-bottom: 74px;
+}
+.our-gallery .flex-card-container {
+  display: flex;
+  gap: 10px;
+}
+.our-gallery .flex-card-container .flex-item {
+  cursor: pointer;
+  flex: 0.5;
+  transition: flex 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  border-radius: 25px;
+  width: 76px;
+  height: 466px;
+  overflow: hidden;
+}
+.our-gallery .flex-card-container .flex-item.active {
+  flex: 50;
+}
+
+/* ================================
+ Desktop Device
+====================================*/
+@media (min-width: 980px) {
+  .our-gallery .flex-card-container .flex-item.active {
+    flex: 5;
+  }
+}

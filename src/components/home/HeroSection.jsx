@@ -74,9 +74,7 @@ function HeroSection({ handleItemClick }) {
     <section className="hero-section">
       <div className="flex-container-2">
         <div className="flex-item">
-          <h1>
-            Sovereign Rock Event Center and Photo Studio, where dreams come true
-          </h1>
+          <h1>Sovereign Rock Event Center and Photo Studio.</h1>
           <h3>where dreams come true</h3>
         </div>
         <div className="flex-item">

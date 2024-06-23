@@ -4,115 +4,103 @@ This styles is basically for
 pages that have common styles
 ==============================
  */
-/* .gallery h3 {
-  margin-bottom: 2rem;
-}
-.gallery .grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 0.9375rem;
-}
-.grid-container .grid-item {
-  display: inline-block;
-}
-.gallery .grid-container > :first-child {
-  grid-area: 1/1/3/3;
-  border-radius: 22px 0 0 22px;
-}
-.gallery .grid-container > :nth-child(2) {
-  grid-area: 1/3/2/5;
-  border-radius: 0 22px 0 0;
-}
-.gallery .grid-container > :nth-child(3) {
-  grid-area: 2/3/3/4;
-}
-.gallery .grid-container > :nth-child(4) {
-  grid-area: 2/4/3/5;
-  cursor: pointer;
-}
-.gallery .grid-container > :last-child {
-  border-radius: 0 0 22px 0;
-}
-.gallery .grid-container img {
-  height: 100%;
-  object-fit: cover;
-}
-.grid-container .grid-item.see-more {
+.general-banner {
   position: relative;
 }
-.grid-container .grid-item.see-more::before {
+.general-banner::before {
   position: absolute;
   top: 0;
   left: 0;
-  content: "";
-  display: inline-block;
-  height: 100%;
   width: 100%;
-  background: rgb(102 105 174 / 45%);
+  content: "";
+  height: 100%;
+  background: linear-gradient(180deg, rgba(11, 18, 21, 0) 0%, #0b1215 100%);
 }
-.grid-container .grid-item .text-title {
+.page-section {
+  background: var(--black-color);
+  color: var(--white-color);
+}
+.page-section input,
+.page-section textarea {
+  background: none;
+  border-bottom: 1px solid #cac4d040;
+  border-radius: 0;
+  color: #fff;
+}
+.page-section label {
+  color: #cac4d0bf;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.page-section button[type="submit"] {
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  width: 100%;
+  background: #125da6;
+  border-radius: 8px;
+  color: #fff;
+}
+.page-section p,
+.page-section h2 {
+  color: #efece6;
+}
+.page-section p {
+  font-weight: 400;
+  line-height: 26px;
+}
+.page-section input[type="date"] {
+  position: relative;
+}
+.page-section input[type="date"]::before {
   position: absolute;
   top: 50%;
-  left: 50%;
+  right: 10px;
+  width: auto;
+  display: inline-block;
+  transform: translate(0%, -50%);
+  content: url(../../public/assets/icons/book-event-icon.svg);
+  z-index: 1010;
+  cursor: pointer;
+}
+.page-section input[type="date"]::-webkit-calendar-picker-indicator {
+  background: #fff;
+  border: 1px solid red;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  transform: translate(-50%, -50%);
-  font-size: 0.875rem;
-  color: #fff;
+  height: 100%;
+  opacity: 0;
+  z-index: 1030;
+}
+/* Background images for different bgs */
+.event-page .general-banner {
+  background: url(../../public/assets/events/event-banner.svg) no-repeat top
+    left/cover;
+}
+.contactus-page .general-banner {
+  background: url(../../public/assets/contactus/contactus-banner.svg) no-repeat
+    top left/cover;
+}
+.studio-page .general-banner {
+  background: url(../../public/assets/images/photo-studio-banner-img.svg)
+    no-repeat top left/cover;
+}
+
+.general-banner .banner-container {
+  display: flex;
+  min-height: 95vh;
+  position: relative;
+}
+.general-banner .banner-wrapper {
+  /* flex-basis: 72%; */
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
   text-align: center;
 }
-.grid-container .grid-item.hidden {
-  display: none;
+.general-banner .banner-wrapper h1 {
+  color: #fff;
 }
-.grid-container .grid-item.show {
-  display: block;
-} */
-
-/* .grid-container-more {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.9375rem;
-} */
-
-/* ===================================================================
-======================Event and Phot Studio Booking Forms============= */
-.form-container.booking-form {
-  /* border: 1px solid red; */
-}
-.form-container.booking-form h3 {
-}
-.form-container.booking-form input {
-}
-.form-container.booking-form button {
-}
-.form-container.booking-form button:hover,
-.form-container.booking-form button:focus-within {
-}
-.form-container.booking-form label {
-}
-
-/* ========================for the event page======================= */
-.event-booking-section {
-}
-
-.our-event .cta-btn-container {
-}
-.our-event .cta-btn-container .flex-container-2 {
-}
-.our-event .cta-btn-container .flex-container-2 > * {
-}
-.our-event .cta-btn-container .cta-btn {
-}
-.our-event .cta-btn-container .flex-item:first-child .cta-btn {
-}
-.our-event .cta-btn-container .flex-item:last-child .cta-btn {
-}
-.our-event .cta-btn-container .cta-btn.active {
-}
-
-/* ========================for the photo studio page======================= */
-
-.studio-booking-section {
-}
-/* =============================
-Desktop Device
-================================*/

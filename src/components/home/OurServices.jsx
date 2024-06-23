@@ -2,7 +2,7 @@ import React from "react";
 
 function OurServices(props) {
   return (
-    <section className="our-services">
+    <section className="our-services" id="services">
       <div className="flex-container-2">
         <div className="flex-item">
           <h2>our services</h2>

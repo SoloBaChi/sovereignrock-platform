@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer(props) {
+function Footer({ handleItemClick }) {
   const year = new Date().getFullYear();
   return (
     <footer className="footer-container">
@@ -20,24 +20,52 @@ function Footer(props) {
                     <Link>Explore</Link>
                     <ul className="nested-list-menu">
                       <li className="list-item">
-                        <Link to="#">services</Link>
+                        <Link
+                          to="#"
+                          onClick={() => {
+                            handleItemClick("services");
+                          }}
+                        >
+                          services
+                        </Link>
                       </li>
                       <li>
-                        <Link to="#">amenities</Link>
+                        <Link
+                          to="#"
+                          onClick={() => {
+                            handleItemClick("amenities");
+                          }}
+                        >
+                          amenities
+                        </Link>
                       </li>
                       <li>
-                        <Link to="#">gallery</Link>
+                        <Link
+                          to="#"
+                          onClick={() => {
+                            handleItemClick("gallery");
+                          }}
+                        >
+                          gallery
+                        </Link>
                       </li>
                       <li>
-                        <Link to="#">photo studio</Link>
+                        <Link to="/photo-studio">photo studio</Link>
                       </li>
                     </ul>
                   </li>
                   <li className="list-item">
-                    <Link to="#">company</Link>
+                    <Link to="/events">company</Link>
                     <ul className="nested-list-menu">
                       <li>
-                        <Link>about us</Link>
+                        <Link
+                          to="#"
+                          onClick={() => {
+                            handleItemClick("aboutus");
+                          }}
+                        >
+                          about us
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -45,7 +73,7 @@ function Footer(props) {
                     <Link to="#">support</Link>
                     <ul className="nested-list-menu">
                       <li>
-                        <Link>contact us</Link>
+                        <Link to="/contactus">contact us</Link>
                       </li>
                     </ul>
                   </li>
