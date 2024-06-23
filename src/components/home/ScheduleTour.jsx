@@ -4,6 +4,19 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function ScheduleTour(props) {
+  // ***imported Gooogle link
+  /*
+
+https://docs.google.com/forms/d/e/1FAIpQLScWU8uX5_g8i8Sn-Se_LZecSW8Q5f8Wt_sDSTdAd5P-ItF4eA/formResponse
+
+usp=pp_url
+&entry.799407715=fn-333
+&entry.1621519225=ln-333
+&entry.1840553454=phone-333
+&entry.1207945471=2024-06-23
+
+*/
+
   const [loading, setLoading] = useState(false);
   // const [submitStatus, setSubmitStatus] = useState("");
   const [errors, setErrors] = useState({});
@@ -60,12 +73,12 @@ function ScheduleTour(props) {
   };
 
   const submitToGoogleForm = async () => {
-    const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSf3ymRHy4Y87Rt1-jQWqrvERvIJmkRywLnLFN4IfalBiJDJyg/formResponse`;
+    const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLScWU8uX5_g8i8Sn-Se_LZecSW8Q5f8Wt_sDSTdAd5P-ItF4eA/formResponse`;
     const formDataToSubmit = new URLSearchParams({
-      "entry.1623458267": formData.firstName,
-      "entry.1481121674": formData.lastName,
-      "entry.1265380812": formData.phone,
-      "entry.344760656": formData.sheduleDate,
+      "entry.799407715": formData.firstName,
+      "entry.1621519225": formData.lastName,
+      "entry.1840553454": formData.phone,
+      "entry.1207945471": formData.sheduleDate,
     });
 
     // const response from the submission
@@ -118,7 +131,7 @@ function ScheduleTour(props) {
     }
   };
   return (
-    <section className="tour-section">
+    <section className="tour-section" id="tour">
       <h2>Schedule a tour</h2>
       <div className="tour-container">
         <div className="form-container contact-us">

@@ -7,7 +7,7 @@
   z-index: -2; */
 }
 .home-page > * {
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
 }
 .home-page > *:last-child {
   margin-bottom: 0;
@@ -44,6 +44,7 @@
   font-family: "Plus Jakarta Sans", sans-serif;
   line-height: 24px;
 }
+.hero-btn .btn,
 .home-page .btn {
   border-radius: 8px;
   font-weight: 400;
@@ -61,6 +62,7 @@
 .home-page a .btn {
   padding: auto;
 }
+.hero-btn .btn.active,
 .hero-section .btn.active {
   background: linear-gradient(0deg, #1465b4, #1465b4),
     linear-gradient(0deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.08));
@@ -74,12 +76,14 @@
 }
 .hero-section .inner-flex > :first-child span,
 .hero-section .inner-flex > :last-child span,
+.hero-btn .btn span,
 .photo-studio .btn span {
   position: relative;
 }
 .hero-section .inner-flex > :last-child span::before,
 .hero-section .inner-flex > :first-child span::before,
-.photo-studio .btn span::before {
+.photo-studio .btn span::before,
+.hero-btn .btn span::before {
   position: absolute;
   top: 0;
   left: -25px;
@@ -219,67 +223,6 @@
 
 } */
 
-/* ===============event and booking============ */
-.event-and-booking {
-  position: relative;
-}
-.event-and-booking::before,
-.event-and-booking::after {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-0%, -50%);
-  content: "";
-  height: 150px;
-  width: 25px;
-  background: var(--frame-color);
-}
-.event-and-booking::after {
-  right: 0;
-  left: auto;
-}
-
-.event-and-booking p {
-  line-height: auto;
-  text-align: left;
-}
-.event-and-booking .flex-container-2 {
-  align-items: center;
-}
-.event-and-booking .form-container {
-  border: 1px solid var(--purple);
-  padding: 1rem;
-  border-radius: 8px;
-}
-.event-and-booking .form-container input,
-.event-and-booking .form-container textarea {
-  border: 1px solid var(--purple);
-  color: #000;
-}
-.event-and-booking .cta-btn-container button {
-  border: 1px solid;
-  width: 100%;
-  text-align: center;
-  background: #888062;
-  padding: 0;
-  color: #fff;
-  font-size: 0.9375rem;
-  border-radius: 8px;
-  font-weight: 400;
-}
-.event-and-booking .form-field {
-  margin-bottom: 1rem;
-}
-.event-and-booking .form-field label {
-  font-size: 0.625rem;
-  color: #6669ae;
-  margin-bottom: 0;
-}
-
-.event-and-booking .double.two {
-  align-items: center;
-}
-
 /* =======================
 Our Gallery
 ========================= */
@@ -318,6 +261,9 @@ Tour
 }
 .tour-section .form-container button[type="submit"] {
   background: #1465b4;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
 }
 .tour-section .form-container input[type="date"] {
   position: relative;
@@ -325,11 +271,12 @@ Tour
 }
 .tour-section .form-container .pick-date {
   position: absolute;
-  top: 70%;
+  top: 0;
+  top: 65%;
   right: 0;
   transform: translate(0%, -50%);
   left: 0;
-  z-index: 1010;
+  z-index: 998;
   text-align: right;
   cursor: pointer;
   font-weight: 600;
@@ -338,13 +285,12 @@ Tour
   .form-container
   input[type="date"]::-webkit-calendar-picker-indicator {
   opacity: 0;
-  display: inline-block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 80%;
-  z-index: 1020;
+  height: 100%;
+  z-index: 1030;
 }
 .tour-section .form-container input[type="date"]::-webkit-inner-spin-button {
   opacity: 0;
@@ -430,14 +376,7 @@ Our Photo Studio
   .event-and-booking h2 {
     text-align: initial;
   }
-  /* ----------------Event and Booking------------ */
-  .event-and-booking .double.two .form-field:first-child {
-    flex-basis: 22%;
-    margin-right: auto;
-  }
-  .event-and-booking .double.two .form-field:last-child {
-    flex-basis: 58%;
-  }
+
   .our-gallery h2 {
     font-size: 5rem;
     text-align: center;
@@ -460,7 +399,7 @@ Our Photo Studio
   }
   .tour-section .form-container {
     margin: auto;
-    flex-basis: 80%;
+    flex-basis: 85%;
   }
   .tour-section .form-wrapper > * {
     flex-basis: 18%;
@@ -469,7 +408,7 @@ Our Photo Studio
   
   } */
   .tour-section .form-container input {
-    padding: 0.7rem 0;
+    padding: 0.7rem 0.2rem;
   }
   .tour-section .form-container button[type="submit"] {
     margin-top: 0.5rem;

@@ -1,0 +1,8 @@
+/* Styles written particularly for the event page */
+
+.event-section .cta-btn-container {
+  text-align: center;
+}
+.event-section .flex-container-2 {
+  align-items: flex-start;
+}

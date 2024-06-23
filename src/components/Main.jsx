@@ -8,6 +8,7 @@ import PhotoStudio from "./photo-studio/PhotoStudio";
 import Footer from "./footer/Footer";
 import SucessfulSubmit from "./shared/SucessfulSubmit";
 import { Data } from "./shared/Data";
+import ContactUs from "./contactus/ContactUs";
 
 const NotFound = () => {
   return (
@@ -40,24 +41,24 @@ function Main(props) {
               <Home
                 handleItemClick={handleItemClick}
                 amenities={Data[0].amenities}
+                banner={Data[0].banner}
               />
             }
           />
+          <Route path="/events" element={<EventCenter />} />
           <Route
-            path="events"
-            element={<EventCenter handleItemClick={handleItemClick} />}
+            path="/photo-studio"
+            element={<PhotoStudio banner={Data[0].banner} />}
           />
-          <Route
-            path="photo-studio"
-            element={<PhotoStudio handleItemClick={handleItemClick} />}
-          />
-          <Route path="successful-submit" element={<SucessfulSubmit />} />
+          <Route path="/contactus" element={<ContactUs />} />
+
+          <Route path="/successful-submit" element={<SucessfulSubmit />} />
           {/* <LaunchCountDown/> */}
 
           {/* not found */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
+        <Footer handleItemClick={handleItemClick} />
       </Router>
     </>
   );

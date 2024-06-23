@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function OurPhotoStudio(props) {
   return (
-    <section className="photo-studio" id="book-event">
+    <section className="photo-studio" id="photo-studio">
       <div className="flex-container-2">
         <div className="flex-item">
           <h2>our photo studio</h2>

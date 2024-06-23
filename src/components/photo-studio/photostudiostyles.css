@@ -1,0 +1,44 @@
+/* ==========Photo Studio Styles========== */
+.studio-section .radio-btns {
+  padding: 0;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.studio-section .radio-btns p {
+  color: #cac4d0bf;
+}
+.studio-section .radio-btns label:not(.caption) {
+  display: inline-block;
+  margin-right: 0.5rem;
+  border-radius: 8px;
+  background: hsla(227, 5%, 37%, 0.349);
+  /* padding: 10px 14px; */
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  text-transform: capitalize;
+  position: relative;
+}
+.studio-section .radio-btns input {
+  display: none;
+  cursor: pointer;
+}
+.studio-section .radio-btns input:checked + label {
+  background: #125da6;
+  color: #fff;
+}
+.studio-section .flex-container-2 {
+  align-items: flex-start;
+}
+.studio-page .carousel-container h2 {
+  color: #efece6;
+  font-size: 56px;
+  text-align: center;
+}
+
+/*================= Desktop Device=========== */
+@media (min-width: 980px) {
+  .studio-page .carousel-container h2 {
+    font-size: 70px;
+  }
+}

@@ -1,28 +1,31 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Gallery from "../shared/Gallery";
-import Amenities from "../amenities/Amenities";
 import EventCenterForm from "./EventCenterForm";
-import OurEvent from "./OurEvent";
+import GeneralBanner from "../shared/GeneralBanner";
 
-function EventCenter({ handleItemClick }) {
+function EventCenter() {
   return (
-    <div className="event-center-page">
-      {/* The Rotating Circle Code goes here */}
-      <Gallery
-        img1={`/events/img-1.svg`}
-        img2={`/events/img-2.svg`}
-        img3={`/events/img-3.svg`}
-        img4={`/events/img-4.svg`}
-        alt={"event label"}
-      />
-      <OurEvent handleItemClick={handleItemClick} />
-      <EventCenterForm />
-      <Amenities />
-
-      <Link to="/">
-        <span>&larr;</span> Go back
-      </Link>
+    <div className="event-page">
+      <div className="event-banner">
+        <GeneralBanner title="event center" />
+      </div>
+      <section className="event-section page-section">
+        <div className="flex-container-2">
+          <div className="flex-item">
+            <h2>book an event</h2>
+            <p>
+              Discover the epitome of elegance and versatility at our premier
+              event center in Dallas fort worth area! Whether you're planning a
+              corporate gala, wedding reception, or special celebration, our
+              state-of-the-art facilities and dedicated team ensure your event
+              is nothing short of extraordinary. Book with us and let your
+              imagination unfold in the heart of Dallas's vibrant atmosphere!
+            </p>
+          </div>
+          <div className="flex-item">
+            <EventCenterForm />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
