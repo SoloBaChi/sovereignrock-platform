@@ -73,11 +73,11 @@ function HeroSection({ handleItemClick }) {
     // </section>
     <section className="hero-section">
       <div className="flex-container-2">
-        <div className="flex-item">
+        <div className="flex-item" data-aos="fade-right">
           <h1>Sovereign Rock Event Center and Photo Studio.</h1>
           <h3>where dreams come true</h3>
         </div>
-        <div className="flex-item">
+        <div className="flex-item" data-aos="fade-left">
           <h5>
             We will make your dream about your special event become a reality
             and an everlasting memory.
@@ -86,7 +86,12 @@ function HeroSection({ handleItemClick }) {
       </div>
       <div className="cta-btn-container">
         <div className="inner-flex">
-          <div className="flex-item">
+          <div
+            className="flex-item"
+            data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <Link to="/events">
               <button
                 // onClick={() => {
@@ -98,7 +103,12 @@ function HeroSection({ handleItemClick }) {
               </button>
             </Link>
           </div>
-          <div className="flex-item">
+          <div
+            className="flex-item"
+            data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <Link to="/photo-studio">
               <button className="btn">
                 <span>Photo studio</span>

@@ -3,7 +3,12 @@ import React from "react";
 function Aboutus(props) {
   return (
     <section className="aboutus-section" id="aboutus">
-      <div className="flex-container-2">
+      <div
+        className="flex-container-2"
+        data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
         <div className="flex-item">
           <h2>about us</h2>
           <p>

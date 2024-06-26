@@ -5,7 +5,12 @@ function OurPhotoStudio(props) {
   return (
     <section className="photo-studio" id="photo-studio">
       <div className="flex-container-2">
-        <div className="flex-item">
+        <div
+          className="flex-item"
+          data-aos="fade-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
           <h2>our photo studio</h2>
           <p>
             Our photo studio is well equipped to transform your imaginations and

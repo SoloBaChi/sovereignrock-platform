@@ -131,7 +131,13 @@ usp=pp_url
     }
   };
   return (
-    <section className="tour-section" id="tour">
+    <section
+      className="tour-section"
+      id="tour"
+      data-aos="fade-down"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
+    >
       <h2>Schedule a tour</h2>
       <div className="tour-container">
         <div className="form-container contact-us">
