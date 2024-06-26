@@ -4,7 +4,12 @@ function OurServices(props) {
   return (
     <section className="our-services" id="services">
       <div className="flex-container-2">
-        <div className="flex-item">
+        <div
+          className="flex-item"
+          data-aos="fade-up-right"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
           <h2>our services</h2>
           <div className="services-contents">
             <button className="service-btn active">wedding reception</button>
@@ -25,7 +30,12 @@ function OurServices(props) {
             <button className="service-btn">Quinceanera</button>
           </div>
         </div>
-        <div className="flex-item">
+        <div
+          className="flex-item"
+          data-aos="fade-up-left"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
           <div className="img-container">
             <img
               src={`/assets/images/services-template-img.svg`}

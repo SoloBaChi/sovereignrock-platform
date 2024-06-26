@@ -50,7 +50,12 @@ function PhotoStudio({ banner }) {
       </div>
       <section className="studio-section page-section">
         <div className="flex-container-2">
-          <div className="flex-item">
+          <div
+            className="flex-item"
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <h2>
               book a photo <br />
               studio session
@@ -64,7 +69,12 @@ function PhotoStudio({ banner }) {
               you to confirm your booking and discuss any further details.
             </p>
           </div>
-          <div className="flex-item">
+          <div
+            className="flex-item"
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <div className="studio-form-container">
               <PhotoStudioForm />
             </div>

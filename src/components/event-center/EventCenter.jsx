@@ -10,7 +10,12 @@ function EventCenter() {
       </div>
       <section className="event-section page-section">
         <div className="flex-container-2">
-          <div className="flex-item">
+          <div
+            className="flex-item"
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <h2>book an event</h2>
             <p>
               Discover the epitome of elegance and versatility at our premier
@@ -21,7 +26,12 @@ function EventCenter() {
               imagination unfold in the heart of Dallas's vibrant atmosphere!
             </p>
           </div>
-          <div className="flex-item">
+          <div
+            className="flex-item"
+            data-aos="fade-down"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
             <EventCenterForm />
           </div>
         </div>
