@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 function OurServices({ services }) {
-  console.log(services);
   const [selectedService, setSelectedService] = useState("wedding reception");
   const handleServiceClick = (service) => {
     setSelectedService(service.title);

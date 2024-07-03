@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -7,7 +7,7 @@ function Contactus(props) {
   const [loading, setLoading] = useState(false);
   // const [submitStatus, setSubmitStatus] = useState("");
   const [errors, setErrors] = useState({});
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -83,6 +83,9 @@ function Contactus(props) {
       }
     } catch (err) {
       // console.log("EROOR", err);
+      if (err) {
+        return err.message;
+      }
     }
   };
 
@@ -95,12 +98,17 @@ function Contactus(props) {
     if (Object.keys(formErrors).length === 0) {
       try {
         // Submit the form
-        await submitToGoogleForm();
+       const res =  await submitToGoogleForm();
+       if (res === "Failed to fetch") {
+        errorNotification("Form Submission Failed...Poor Network!");
+        setLoading(false);
+        return;
+      }
         notificationMsg("Form successfully Submitted");
         // reset the form data
         resetFormData();
         setLoading(false);
-        navigate("/successful-submit");
+        // navigate("/successful-submit");
       } catch (err) {
         // setSubmitStatus("Form Submission Failed!");
         errorNotification("Form Submission Failed!");

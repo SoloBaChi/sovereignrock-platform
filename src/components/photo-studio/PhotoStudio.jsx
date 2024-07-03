@@ -46,7 +46,7 @@ function PhotoStudio({ banner }) {
   return (
     <div className="studio-page">
       <div className="studio-banner">
-        <GeneralBanner title="welcome to photo studio" />
+        <GeneralBanner title="welcome to our photo studio" />
       </div>
       <section className="studio-section page-section">
         <div className="flex-container-2">
