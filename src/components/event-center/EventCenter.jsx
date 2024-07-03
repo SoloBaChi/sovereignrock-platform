@@ -6,7 +6,7 @@ function EventCenter() {
   return (
     <div className="event-page">
       <div className="event-banner">
-        <GeneralBanner title="event center" />
+        <GeneralBanner title="our event center" />
       </div>
       <section className="event-section page-section">
         <div className="flex-container-2">

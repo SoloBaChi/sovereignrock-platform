@@ -21,6 +21,7 @@ function PhotoStudioForm(props) {
   const [loading, setLoading] = useState(false);
   // const [submitStatus, setSubmitStatus] = useState("");
   const [errors, setErrors] = useState({});
+  const [submitError, setSubmitError] = useState(null);
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -96,13 +97,15 @@ function PhotoStudioForm(props) {
       "entry.487993605": formData.phone,
       "entry.259064864": formData.dateOfEvent,
       "entry.591770046": formData.noOfGuest,
-      "entry.557356022": formData.session || formData.others,
+      "entry.557356022":
+        formData.session === "others" ? formData.others : formData.session,
     });
 
     // const response from the submission
     try {
       const response = await fetch(googleFormUrl, {
         method: "POST",
+        mode: "no-cors",
         body: formDataToSubmit,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -114,6 +117,10 @@ function PhotoStudioForm(props) {
       }
     } catch (err) {
       // console.log("EROOR", err);
+      setSubmitError(err);
+      if (err) {
+        return err.message;
+      }
     }
   };
 
@@ -126,28 +133,29 @@ function PhotoStudioForm(props) {
     if (Object.keys(formErrors).length === 0) {
       try {
         // Submit the form
-        await submitToGoogleForm();
+        const res = await submitToGoogleForm();
+        if (res === "Failed to fetch") {
+          errorNotification("Form Submission Failed...Poor Network!");
+          setLoading(false);
+          return;
+        }
         notificationMsg("Form successfully Submitted");
         // reset the form data
         resetFormData();
         setLoading(false);
-        navigate("/successful-submit");
+        // navigate("/successful-submit");
       } catch (err) {
         // setSubmitStatus("Form Submission Failed!");
         errorNotification("Form Submission Failed!");
-        // console.log(err);
         setLoading(false);
       }
-      /*Please put thid inisde the try block*/
-      // Update the setSubmit function
-      // setSubmitStatus("");
-      // notificationMsg("Form successfully Submitted");
     } else {
       setErrors(formErrors);
       errorNotification("Form Submission Failed!");
       setLoading(false);
     }
   };
+  // console.log(submitError);
   return (
     <section className="studio-booking-section">
       <div className="form-container studio-form">
@@ -339,6 +347,10 @@ function PhotoStudioForm(props) {
                 value={formData.others}
                 onChange={handleChange}
               />
+              {/* <p> {formData.others}</p> */}
+              {!formData.others && (
+                <p className="error-message">Please Provide a Specific.</p>
+              )}
             </div>
           ) : (
             <p>
