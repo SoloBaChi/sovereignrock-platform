@@ -7,13 +7,13 @@ import OurGallery from "../gallery/OurGallery";
 import ScheduleTour from "./ScheduleTour";
 import Banner from "../header/Banner";
 
-function Home({ handleItemClick, amenities, banner }) {
+function Home({ handleItemClick, amenities, banner, services }) {
   return (
     <div className="home-page">
       <Banner banner={banner} />
       <HeroSection handleItemClick={handleItemClick} />
       <Amenities amenities={amenities} />
-      <OurServices />
+      <OurServices services={services} />
       <OurGallery />
       <OurPhotoStudio />
       <ScheduleTour />

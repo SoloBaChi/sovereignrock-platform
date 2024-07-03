@@ -47,16 +47,16 @@ export const panelData = [
     id: 11,
     imgSrc: `/assets/gallery/img_12.svg`,
   },
-  {
-    id: 12,
-    imgSrc: `/assets/gallery/img_13.svg`,
-  },
-  {
-    id: 13,
-    imgSrc: `/assets/gallery/img_14.svg`,
-  },
-  {
-    id: 14,
-    imgSrc: `/assets/gallery/img_15.svg`,
-  },
+  // {
+  //   id: 12,
+  //   imgSrc: `/assets/gallery/img_13.svg`,
+  // },
+  // {
+  //   id: 13,
+  //   imgSrc: `/assets/gallery/img_14.svg`,
+  // },
+  // {
+  //   id: 14,
+  //   imgSrc: `/assets/gallery/img_15.svg`,
+  // },
 ];

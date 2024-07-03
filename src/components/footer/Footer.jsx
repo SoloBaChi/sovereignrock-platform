@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Footer({ handleItemClick }) {
+function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer className="footer-container">
@@ -20,37 +20,21 @@ function Footer({ handleItemClick }) {
                     <Link>Explore</Link>
                     <ul className="nested-list-menu">
                       <li className="list-item">
-                        <Link
-                          to="#"
-                          onClick={() => {
-                            handleItemClick("services");
-                          }}
-                        >
-                          services
-                        </Link>
+                        <Link to="/#services">services</Link>
                       </li>
                       <li>
-                        <Link
-                          to="#"
-                          onClick={() => {
-                            handleItemClick("amenities");
-                          }}
-                        >
-                          amenities
-                        </Link>
+                        <Link to="/#amenities">amenities</Link>
                       </li>
                       <li>
-                        <Link
-                          to="#"
-                          onClick={() => {
-                            handleItemClick("gallery");
-                          }}
-                        >
-                          gallery
-                        </Link>
+                        <Link to="/#gallery">gallery</Link>
                       </li>
                       <li>
                         <Link to="/photo-studio">photo studio</Link>
+                      </li>
+                      <li>
+                        <Link to="/">
+                          <span>&larr;</span> Go back
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -58,14 +42,7 @@ function Footer({ handleItemClick }) {
                     <Link to="/events">company</Link>
                     <ul className="nested-list-menu">
                       <li>
-                        <Link
-                          to="#"
-                          onClick={() => {
-                            handleItemClick("aboutus");
-                          }}
-                        >
-                          about us
-                        </Link>
+                        <Link to="/#aboutus">about us</Link>
                       </li>
                     </ul>
                   </li>
