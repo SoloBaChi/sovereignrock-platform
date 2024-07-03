@@ -3,7 +3,7 @@ import MenuBarIcon from "../icons/MenuBarIcon";
 import Menu from "./Menu";
 import { Link } from "react-router-dom";
 
-function Navbar({ handleItemClick }) {
+function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const handleToggleMenu = () => {
     setToggleMenu((prev) => !prev);
@@ -29,7 +29,7 @@ function Navbar({ handleItemClick }) {
         className={toggleMenu ? "nav-menu active" : " nav-menu"}
         onClick={handleToggleMenu}
       >
-        <Menu handleItemClick={handleItemClick} />
+        <Menu />
       </nav>
     </div>
   );

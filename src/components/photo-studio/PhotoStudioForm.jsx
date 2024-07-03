@@ -30,6 +30,7 @@ function PhotoStudioForm(props) {
     noOfGuest: "",
     phone: "",
     session: "professional photos",
+    others: "",
   });
 
   const validateForm = () => {
@@ -95,7 +96,7 @@ function PhotoStudioForm(props) {
       "entry.487993605": formData.phone,
       "entry.259064864": formData.dateOfEvent,
       "entry.591770046": formData.noOfGuest,
-      "entry.557356022": formData.session,
+      "entry.557356022": formData.session || formData.others,
     });
 
     // const response from the submission
@@ -188,7 +189,7 @@ function PhotoStudioForm(props) {
                 type="number"
                 id="phone"
                 name="phone"
-                placeholder="+634 405 987"
+                placeholder="+1234567890"
                 value={formData.phone}
                 onChange={handleChange}
               />
@@ -318,24 +319,46 @@ function PhotoStudioForm(props) {
               onChange={handleChange}
             />
             <label htmlFor="online-forums">online forums</label>
+
+            <input
+              type="radio"
+              id="others"
+              name="session"
+              value="others"
+              checked={formData.session === "others"}
+              onChange={handleChange}
+            />
+            <label htmlFor="others">others</label>
           </div>
-          <p>
-            You have selected{" "}
-            <span
-              style={{
-                color: "yellow",
-                textTransform: "capitalize",
-                marginBottom: "1rem",
-                display: "inline-block",
-              }}
-            >
-              {formData.session}
-            </span>{" "}
-            as your session
-          </p>
-          <div className="cta-btn-container toastify-btn">
+          {formData.session === "others" ? (
+            <div className="form-field">
+              <input
+                type="text"
+                placeholder="Please Specify"
+                name="others"
+                value={formData.others}
+                onChange={handleChange}
+              />
+            </div>
+          ) : (
+            <p>
+              You have selected{" "}
+              <span
+                style={{
+                  color: "yellow",
+                  textTransform: "capitalize",
+                  marginBottom: "1rem",
+                  display: "inline-block",
+                }}
+              >
+                {formData.session}
+              </span>{" "}
+              as your session
+            </p>
+          )}
+          <div className="cta-btn-contai vner toastify-btn">
             <button type="submit">
-              {loading ? "Please wait..." : "book event"}
+              {loading ? "Please wait..." : "book session"}
             </button>
           </div>
           <ToastContainer />

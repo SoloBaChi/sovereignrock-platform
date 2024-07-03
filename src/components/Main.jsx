@@ -9,6 +9,7 @@ import Footer from "./footer/Footer";
 import SucessfulSubmit from "./shared/SucessfulSubmit";
 import { Data } from "./shared/Data";
 import ContactUs from "./contactus/ContactUs";
+import ScrollToTop from "./home/ScrollToTop";
 
 const NotFound = () => {
   return (
@@ -22,26 +23,19 @@ const NotFound = () => {
 };
 
 function Main(props) {
-  console.log(Data);
-  const handleItemClick = (sectionId) => {
-    // scroll to the corresponding section
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
-  };
   return (
     <>
       <Router>
-        <Header handleItemClick={handleItemClick} banner={Data[0].banner} />
+        <ScrollToTop />
+        <Header banner={Data[0].banner} />
         <Routes>
           <Route
             path="/"
             element={
               <Home
-                handleItemClick={handleItemClick}
                 amenities={Data[0].amenities}
                 banner={Data[0].banner}
+                services={Data[0].services}
               />
             }
           />
@@ -58,7 +52,7 @@ function Main(props) {
           {/* not found */}
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer handleItemClick={handleItemClick} />
+        <Footer />
       </Router>
     </>
   );

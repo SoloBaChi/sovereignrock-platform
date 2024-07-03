@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Aboutus from "./Aboutus";
 
 function HeroSection({ handleItemClick }) {
-  const handleHover = (e) => {
+  /*const handleHover = (e) => {
     const target = e.target;
     if (!target.classList.contains("active")) {
       // Remove active class from all items
@@ -16,6 +16,7 @@ function HeroSection({ handleItemClick }) {
       // setPlaceholder(target.dataset.placeholder);
     }
   };
+  */
   return (
     // <section className="hero-section">
     //   <h1>
@@ -84,7 +85,7 @@ function HeroSection({ handleItemClick }) {
           </h5>
         </div>
       </div>
-      <div className="cta-btn-container">
+      <div className="cta-btn-container" id="for-booking">
         <div className="inner-flex">
           <div
             className="flex-item"
