@@ -72,6 +72,7 @@ function ContactUsForm(props) {
     try {
       const response = await fetch(googleFormUrl, {
         method: "POST",
+        mode: "no-cors",
         body: formDataToSubmit,
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
