@@ -71,6 +71,9 @@ function Footer() {
             </Link>
           </div>
         </div>
+        <address>
+          5000 Western Center Blvd, Suite 340, Haltom City, Texas 76137
+        </address>
         <div className="hr-line">
           <hr />
         </div>
