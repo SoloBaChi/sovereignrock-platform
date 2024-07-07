@@ -11,6 +11,7 @@ function ContactUsForm(props) {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
+    email: "",
     phone: "",
     message: "",
   });
@@ -22,6 +23,9 @@ function ContactUsForm(props) {
     }
     if (!formData.lastName) {
       formErrors.lastName = "Last Name is required !";
+    }
+    if (!formData.email) {
+      formErrors.email = "Email is required !";
     }
     if (!formData.phone) {
       formErrors.phone = "Phone Number is required !";
@@ -54,16 +58,27 @@ function ContactUsForm(props) {
     setFormData({
       firstName: "",
       lastName: "",
+      email: "",
       phone: "",
       message: "",
     });
   };
+
+/*
+https://docs.google.com/forms/d/e/1FAIpQLSf3ymRHy4Y87Rt1-jQWqrvERvIJmkRywLnLFN4IfalBiJDJyg/viewform?usp=pp_url
+&entry.1623458267=contac-fn
+&entry.1481121674=contact-ln
+&entry.1317393658=conttact-email
+&entry.1265380812=contact-phone
+&entry.344760656=contact-message
+*/
 
   const submitToGoogleForm = async () => {
     const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLSf3ymRHy4Y87Rt1-jQWqrvERvIJmkRywLnLFN4IfalBiJDJyg/formResponse`;
     const formDataToSubmit = new URLSearchParams({
       "entry.1623458267": formData.firstName,
       "entry.1481121674": formData.lastName,
+      "entry.1317393658": formData.email,
       "entry.1265380812": formData.phone,
       "entry.344760656": formData.message,
     });
@@ -156,6 +171,19 @@ function ContactUsForm(props) {
             {errors.lastName && (
               <p className="error-message">{errors.lastName}</p>
             )}
+          </div>
+        </div>
+        <div className="single">
+          <div className="form-field">
+            <label htmlFor="email">email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              onChange={handleChange}
+              value={formData.email}
+            />
+            {errors.email && <p className="error-message">{errors.email}</p>}
           </div>
         </div>
         <div className="single">
