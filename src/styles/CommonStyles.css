@@ -76,7 +76,7 @@ pages that have common styles
 }
 /* Background images for different bgs */
 .event-page .general-banner {
-  background: url(../../public/assets/events/event-banner.svg) no-repeat top
+  background: url(../../public/assets/services/holiday_party.jpg) no-repeat top
     left/cover;
 }
 .contactus-page .general-banner {
@@ -84,7 +84,7 @@ pages that have common styles
     top left/cover;
 }
 .studio-page .general-banner {
-  background: url(../../public/assets/images/photo-studio-banner-img.svg)
+  background: url(../../public/assets/services/studio_pix.jpg)
     no-repeat top left/cover;
 }
 

@@ -300,6 +300,7 @@ Our Photo Studio
 ========================= */
 .photo-studio {
   background: url(../../public/assets/images/homepg-studio-bg.svg) no-repeat top
+  /* background: url(../../public/assets/services/studio_pix.jpg) no-repeat top */
     left/cover;
   margin-bottom: 0;
 }
