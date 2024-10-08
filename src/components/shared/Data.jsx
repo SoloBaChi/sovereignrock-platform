@@ -3,23 +3,23 @@ export const Data = [
     banner: [
       {
         id: 0,
-        imgSrc: `/assets/banner/img_0.svg`,
+        imgSrc: `/assets/services/holiday_party.jpg`,
       },
       {
         id: 1,
-        imgSrc: `/assets/banner/img_1.svg`,
+        imgSrc: `/assets/services/birthday_party.jpg`,
       },
       {
         id: 2,
-        imgSrc: `/assets/banner/img_2.svg`,
-      },
-      {
-        id: 3,
         imgSrc: `/assets/banner/img_3.svg`,
       },
       {
+        id: 3,
+        imgSrc: `/assets/services/wedding_reception.jpg`,
+      },
+      {
         id: 4,
-        imgSrc: `/assets/banner/img_4.svg`,
+        imgSrc: `/assets/banner/img_4.jpg`,
       },
       {
         id: 5,
@@ -27,11 +27,15 @@ export const Data = [
       },
       {
         id: 6,
-        imgSrc: `/assets/banner/img_6.svg`,
+        imgSrc: `/assets/banner/img_6.jpg`,
       },
       {
         id: 7,
         imgSrc: `/assets/banner/img_7.svg`,
+      },
+      {
+        id: 8,
+        imgSrc: `/assets/services/studio_pix.jpg`,
       },
     ],
     amenities: [
@@ -85,7 +89,7 @@ export const Data = [
       {
         id: 0,
         title: "wedding reception",
-        imgSrc: `/assets/services/wedding_reception.svg`,
+        imgSrc: `/assets/services/wedding_reception.jpg`,
       },
       {
         id: 1,
@@ -105,7 +109,7 @@ export const Data = [
       {
         id: 4,
         title: "holiday party",
-        imgSrc: `/assets/services/holiday_party.svg`,
+        imgSrc: `/assets/services/holiday_party.jpg`,
       },
       {
         id: 5,
@@ -135,7 +139,7 @@ export const Data = [
       {
         id: 10,
         title: "birthdays",
-        imgSrc: `/assets/services/birthdays.svg`,
+        imgSrc: `/assets/services/birthday_party.jpg`,
       },
       {
         id: 11,

@@ -24,7 +24,7 @@ function Aboutus(props) {
         <div className="flex-item">
           <div className="img-container">
             <img
-              src={`/assets/images/aboutus-hero-img.svg`}
+              src={`/assets/images/aboutus-hero-img.jpg`}
               alt="sovereign rock building"
             />
           </div>

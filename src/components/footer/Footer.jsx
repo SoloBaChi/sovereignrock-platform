@@ -89,7 +89,7 @@ function Footer() {
               </Link>
             </div>
             <div className="flex-item">
-              <Link to="#" className="icon-container">
+              <Link to="https://www.facebook.com/profile.php?id=61562591473862" target="_blank" className="icon-container">
                 <img src={`/assets/icons/facebook.svg`} alt="facebook" />
               </Link>
             </div>
