@@ -31,10 +31,6 @@ export const Data = [
       },
       {
         id: 7,
-        imgSrc: `/assets/banner/img_7.svg`,
-      },
-      {
-        id: 8,
         imgSrc: `/assets/services/studio_pix.jpg`,
       },
     ],
