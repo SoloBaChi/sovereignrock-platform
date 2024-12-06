@@ -109,8 +109,12 @@
 
 /* ===============Banner section styles============== */
 .banner-section .img-container {
-  min-height: 340px;
-  overflow: hidden;
+  height:520px;
+  overflow:hidden;
+}
+.banner-section .img-container img{
+  object-fit:cover;
+  height:100%;
 }
 
 /* ===============About us styles============== */
