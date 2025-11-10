@@ -6,17 +6,17 @@ import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const SERVER_DOWN = () => {
-  return (
-    <div className="server-down">
-      <p>Server is Down, Please try again !</p>
-    </div>
-  );
-};
+// const SERVER_DOWN = () => {
+//   return (
+//     <div className="server-down">
+//       <p>Server is Down, Please try again !</p>
+//     </div>
+//   );
+// };
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <SERVER_DOWN />
+    <App />
+    {/* <SERVER_DOWN /> */}
   </React.StrictMode>,
 );
 
