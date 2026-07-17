@@ -21,8 +21,6 @@ function PhotoStudioForm(props) {
   const [loading, setLoading] = useState(false);
   // const [submitStatus, setSubmitStatus] = useState("");
   const [errors, setErrors] = useState({});
-  const [submitError, setSubmitError] = useState(null);
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
