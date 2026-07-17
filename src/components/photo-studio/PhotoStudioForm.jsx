@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 function PhotoStudioForm(props) {
@@ -115,7 +114,7 @@ function PhotoStudioForm(props) {
       }
     } catch (err) {
       // console.log("EROOR", err);
-      setSubmitError(err);
+      setErrors(err);
       if (err) {
         return err.message;
       }

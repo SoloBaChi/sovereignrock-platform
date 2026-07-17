@@ -1,14 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./styles/Index.css";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { SERVER_DOWN } from "./ServerDown";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <SERVER_DOWN />
+    <App />
   </React.StrictMode>,
 );
 
